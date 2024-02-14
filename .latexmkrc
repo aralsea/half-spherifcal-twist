@@ -9,6 +9,7 @@ $max_repeat = 5;
 # # BibTeX
 $bibtex = 'bibtex %O %S';
 $biber = 'biber --bblencoding=utf8 -u -U --output_safechars %O %S';
+#$bib_program = 'biber';
 
 # DVI / PDF
 $pdf_mode = 1; # use pdflatex

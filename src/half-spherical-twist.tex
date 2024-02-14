@@ -2,10 +2,25 @@
 \documentclass[12pt]{amsart}
 \usepackage[margin=20truemm]{geometry}
 \usepackage[backend=biber, style=alphabetic, sorting=nyt]{biblatex}
-\addbibresource{../bib/half-spherical-twist.bib} 
+\addbibresource{../bib/half-spherical-twist.bib}
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map{
+      \step[fieldsource=url, 
+            match=\regexp{https?://doi-org}, 
+            final]
+      \step[fieldset=url, null]
+      \step[fieldset=urldate, null]
+    }
+  }
+}
+
+
+
+
 
 %% packages
-\usepackage[svgnames,psnames]{xcolor}
+\usepackage[svgnames]{xcolor}
 \usepackage{mathtools}
 \usepackage{tikz-cd}
 \usepackage{amsmath, amssymb, amsthm}
@@ -96,6 +111,8 @@
     linkcolor=MediumBlue,
 ]{hyperref}
 
+
+
 \title[Half-spherical twists]{
     Half-spherical twists on derived categories\\ of coherent sheaves
     }
@@ -151,7 +168,7 @@ For example, the twist $T_{\cO_X}$ along the structure sheaf $\cO_X$ is not stan
 
 There are several other varieties whose autoequivalence groups are (partially) determined.
 They include toric surfaces \cite{MR3162236}, $K3$ surfaces \cite{MR2553878, MR3592689}, elliptic surfaces \cite{MR3568337}, the minimal resolution of $A_n$-singularities \cite{MR2198807, MR2629510},
-and some singular curves \cite{MR2264663, 2020arXiv201108288O}.
+and some singular curves \cite{MR2264663, opper2023spherical}.
 The most fundamental tools to study autoequivalence groups in these researches are spherical twists and group actions on the Grothendieck group (or other suitable spaces) like $\theta$ in \eqref{eq:autoequivalence-of-elliptic-curve}.
 
 Generalizations of spherical twists have been studied by various authors,
@@ -223,7 +240,7 @@ Our second result (Theorem \ref{thm:half-spherical-twist-and-half-twist}) identi
     \begin{equation}
         \Upsilon \colon \Auteq{D^b(X_0)} \to \MCG(T_n)
     \end{equation}
-    defined in \cite{2020arXiv201108288O} (see Theorem \ref{thm:autoequivalence-of-I_n-curve}).
+    defined in \cite{opper2023spherical} (see Theorem \ref{thm:autoequivalence-of-I_n-curve}).
 \end{theorem}
 The term \emph{half-spherical twists} is motivated by this result, as the original spherical twists are named after their analogy to Dehn twists.
 The proof of Theorem \ref{thm:main-theorem-2-half-twist} relies on the following two key facts:
@@ -331,7 +348,7 @@ Let $X$ be a scheme.
 \subsection*{Acknowledgements}
 The author expresses his sincere gratitude to his advisor, Kazushi Ueda, for the helpful discussions, suggestions, and encouragement provided during this research.
 He is grateful to his family for their understanding and constant support throughout his life.
-He is also thankful to Tomohiro Karube for variable discussion and informing him of the paper \cite{2023arXiv230109453K}, which includes similar ideas to the first result Theorem \ref{thm:main-theorem-1-half-spherical-twist}.
+He is also thankful to Tomohiro Karube for variable discussion and informing him of the paper \cite{karube2023stability}, which includes similar ideas to the first result Theorem \ref{thm:main-theorem-1-half-spherical-twist}.
 
 
 
@@ -1589,17 +1606,17 @@ They are known to form a mirror pair due to the result of Lekili and Polishchuk.
     For the other types of Kodaira fibers, their mirror partners (or even candidates of mirrors) are not known yet.
 \end{remark}
 This equivalence suggests that spherical objects and some autoequivalences of $D^b(F_n)$ correspond to closed curves and mapping classes of $T_n$, respectively.
-For more detailed formulations of such correspondence, we refer to \cite{2020arXiv201108288O}.
-\begin{theorem}[{\cite[Theorem A, Proposition 7.13]{2020arXiv201108288O}}]\label{thm:bijection-between-objects-and-curves}
+For more detailed formulations of such correspondence, we refer to \cite{opper2023spherical}.
+\begin{theorem}[{\cite[Theorem A, Proposition 7.13]{opper2023spherical}}]\label{thm:bijection-between-objects-and-curves}
     There exists a bijection between isomorphism classes of indecomposable objects of $D^b(F_n)$ up to shift, and homotopy classes of curves on $T_n$ equipped with indecomposable local systems.
     Moreover, under this bijection, spherical objects correspond to non-separating simple loops with one-dimensional local systems.
 \end{theorem}
-\begin{theorem}[{\cite[Proposition 3.10, Theorem 7.22]{2020arXiv201108288O}}]\label{intersections_are_morphisms}
+\begin{theorem}[{\cite[Proposition 3.10, Theorem 7.22]{opper2023spherical}}]\label{intersections_are_morphisms}
     Let $\cF$ and $\cG$ be indecomposable objects of $D^b(F_n)$ which correspond to $(\gamma_{\cF}, V_{\cF})$ and $(\gamma_{\cG}, V_{\cG})$ by Theorem \ref{thm:bijection-between-objects-and-curves}, respectively.
     Here $\gamma_{\cF}, \gamma_{\cG}$ are homotopy classes of curves on $T_n$ and $V_{\cF}, V_{\cG}$ are local systems on these curves.
     Suppose that either $\cF$ or $\cG$ is perfect and $\dim V_{\cF} = \dim V_{\cG} = 1$. Then $\gamma_{\cF}$ and $\gamma_{\cG}$ have precisely $\sum_{i}\dim\Ext^i(\cF, \cG)$ intersections.
 \end{theorem}
-\begin{theorem}[{\cite[Theorem D]{2020arXiv201108288O}}]\label{thm:autoequivalence-of-I_n-curve}
+\begin{theorem}[{\cite[Theorem D]{opper2023spherical}}]\label{thm:autoequivalence-of-I_n-curve}
     Assume $n \geq 2$.
     The group of autoequivalences $\Auteq{D^b(F_n)}$ fits into the short exact sequence
     \begin{equation}
@@ -1607,11 +1624,11 @@ For more detailed formulations of such correspondence, we refer to \cite{2020arX
     \end{equation}
     where $\Pic^0(F_n)$ denotes the group of line bundles with multi-degree zero, and $\Aut^0(F_n) \cong (\bC^\times)^n$ denotes the group of autoequivalences fixing the irreducible components of $F_n$.
 \end{theorem}
-\begin{theorem}[{\cite[Corollary 7.37]{2020arXiv201108288O}}]\label{thm:definition-of-upsilon}
+\begin{theorem}[{\cite[Corollary 7.37]{opper2023spherical}}]\label{thm:definition-of-upsilon}
     The morphism $\Upsilon$ in Theorem \ref{thm:autoequivalence-of-I_n-curve} respects the correspondence in Theorem \ref{thm:bijection-between-objects-and-curves} in the following sense:
     For an element $\Phi \in \Auteq{D^b(F_n)}$, the mapping class $\Upsilon(\Phi)$ acts on the set of homotopy classes of curves on $T_n$ by $\gamma_{\cF} \mapsto \gamma_{\Phi(\cF)}$, where $\gamma_{\cF}$ is the curve on $T_n$ corresponding to an indecomposable object $\cF \in D^b(F_n)$.
 \end{theorem}
-\begin{theorem}[{\cite[Theorem 5.9]{2020arXiv201108288O}}]\label{thm:spherical-twist-and-dehn-twist}
+\begin{theorem}[{\cite[Theorem 5.9]{opper2023spherical}}]\label{thm:spherical-twist-and-dehn-twist}
     Let $\cE \in D^b(F_n)$ be a spherical object and $(\gamma_{\cE}, V_{\cE})$ be the corresponding loop and local system. Then the morphism $\Upsilon$ in Theorem \ref{thm:autoequivalence-of-I_n-curve} maps the twist functor $T_{\cE}$ to the Dehn twist $T_{\gamma_{\cE}}$ along $\gamma_{\cE}$.
 \end{theorem}
 
@@ -1877,7 +1894,7 @@ To begin with, we prepare some computations of homological algebra.
     definition of half twists.
     It remains to show that $\gamma = \Upsilon(H)(\gamma_{\cO_{x_1}})$ and $\gamma' = h(\gamma_{\cO_{x_1}})$ are homotopic.
     Note that $\gamma$ is (homotopic to) the curve corresponding to the object $H(\cO_{x_1})$ by Theorem \ref{thm:definition-of-upsilon} and a simple non-separating loop as $H(\cO_{x_1})$ is spherical.
-    To attack this problem, we will mimic the proof of \cite[Corollary 7.27]{2020arXiv201108288O}.
+    To attack this problem, we will mimic the proof of \cite[Corollary 7.27]{opper2023spherical}.
     We only consider the case $n \geq 3$.
     The case $n = 2$ can be treated similarly.
     There are identities
@@ -2201,7 +2218,7 @@ Let $\res = \prod_{F \colon \text{reducible fiber}} \res_F$ be the product of th
 %     Let $F_n$ be the Kodaira fiber of type $\rom{1}_n$ and $\PMCG(T_n) \subset \MCG(T_n)$ be the \emph{pure mapping class group} consisting of the mapping classes which fix the individual punctures.
 %     Motivated by homological mirror symmetry (HMS) for $F_n$ and $T_n$, Sibilla \cite{MR3182005} explicitly constructed an action on $D^b(F_n)$ of the \emph{graded} pure mapping class group $\widetilde{\PMCG}(T_n)$, which is a central extension of $\PMCG(T_n)$ by $\bZ$,
 %     and conjectured that this action is faithful.
-%     By using recent developments in HMS such as \cite{MR3735868, MR3830878}, one can extend the action to the whole graded mapping class group $\widetilde{\MCG(T_n)}$ and prove its faithfulness as stated in \cite{2020arXiv201108288O}.
+%     By using recent developments in HMS such as \cite{MR3735868, MR3830878}, one can extend the action to the whole graded mapping class group $\widetilde{\MCG(T_n)}$ and prove its faithfulness as stated in \cite{opper2023spherical}.
 
 %     On the other hand, the mapping class group $\MCG(T_n)$ is generated by the set of half twists along certain arcs and the subgroup $\PMCG(T_n)$ \cite{MR1805936}.
 %     Our results will give an alternative way to construct the action of $\widetilde{\MCG}(T_n)$ on $D^b(F_n)$ avoiding HMS, as Sibilla did.
