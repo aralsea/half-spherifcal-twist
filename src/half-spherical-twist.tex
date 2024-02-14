@@ -1,9 +1,11 @@
 \pdfoutput=1
-\documentclass{amsart}
+\documentclass[12pt]{amsart}
+\usepackage[margin=20truemm]{geometry}
 \usepackage[backend=biber, style=alphabetic, sorting=nyt]{biblatex}
-\addbibresource{../bib/half_spherical.bib} 
+\addbibresource{../bib/half-spherical-twist.bib} 
 
 %% packages
+\usepackage[svgnames,psnames]{xcolor}
 \usepackage{mathtools}
 \usepackage{tikz-cd}
 \usepackage{amsmath, amssymb, amsthm}
@@ -87,7 +89,12 @@
 \makeatother
 
 % hyperref 
-\usepackage[urlcolor=blue]{hyperref}
+\usepackage[
+    colorlinks=true,
+    citecolor=MediumBlue,
+    urlcolor=MediumBlue,
+    linkcolor=MediumBlue,
+]{hyperref}
 
 \title[Half-spherical twists]{
     Half-spherical twists on derived categories\\ of coherent sheaves
@@ -157,11 +164,11 @@ Anno--Logvinenko \cite{MR3692883},
 to name a few.
 Among them, \emph{twists along $\bP^n$-objects} introduced in \cite{MR2200048} are related to spherical twists in the following way.
 Let $X \to C$ be a smooth family of varieties over a smooth curve $C$ and $i \colon X_{0} \hookrightarrow X$ be the fiber at $0 \in C$.
-Then a $\bP^n$-object $E \in D^b(X_0)$ with suitable conditions induces a spherical object $i_*E \in D^b(X)$,
-and the associated twists $P_E \in \Auteq{D^b(X_0)}$ and $T_{i_*E} \in \Auteq{D^b(X)}$ make the following diagram commutative:
+Then a $\bP^n$-object $\cE \in D^b(X_0)$ with suitable conditions induces a spherical object $i_*\cE \in D^b(X)$,
+and the associated twists $P_{\cE} \in \Auteq{D^b(X_0)}$ and $T_{i_* \cE} \in \Auteq{D^b(X)}$ make the following diagram commutative:
 \begin{equation} \label{eq:cd}
     \begin{tikzcd}
-        D^b(X_0) \arrow[r,"i_*"]\arrow[d, "P_E"'] & D^b(X) \arrow[d,"T_{i_*E}"]\\
+        D^b(X_0) \arrow[r,"i_*"]\arrow[d, "P_{\cE}"'] & D^b(X) \arrow[d,"T_{i_*{\cE}}"]\\
         D^b(X_0) \arrow[r, "i_*"]& D^b(X).
     \end{tikzcd}
 \end{equation}
@@ -169,31 +176,31 @@ and the associated twists $P_E \in \Auteq{D^b(X_0)}$ and $T_{i_*E} \in \Auteq{D^
 In the first half of this paper, we generalize this picture to the case when $X$ is a flat but not necessarily smooth family over a smooth base $T$, and introduce a variant of spherical twists which we call \emph{half-spherical twists}.
 \begin{theorem}[Definition \ref{def:half-spherical-twist}, Corollary \ref{cor:compatibility-of-half-spherical-twists-and-spherical-twists}]\label{thm:main-theorem-1-half-spherical-twist}
     Let $\pi \colon X \to T$ be a flat morphism between smooth quasi-projective varieties over an algebraically closed field $k$ and $X_0$ be a fiber over a closed point $0 \in T$.
-    Let $E \in D^b(X_0)$ be an object such that $i_*E$ is spherical in $D^b(X)$.
-    Then we can canonically construct an autoequivalence $H_E$ of $D^b(X_0)$ which makes the following diagram commutative:
+    Let $\cE \in D^b(X_0)$ be an object such that $i_*{\cE}$ is spherical in $D^b(X)$.
+    Then we can canonically construct an autoequivalence $H_{\cE}$ of $D^b(X_0)$ which makes the following diagram commutative:
     \begin{equation}\label{eq:half-spherical-twist-commutative-diagram}
         \begin{tikzcd}
-            D^b(X_0) \ar[r, "i_*"] \ar[d, "H_E"'] & D^b(X) \ar[r, "i^*"]\ar[d, "T_{i_*E}"] & D^b(X_0) \ar[d,  "H_E"]\\
+            D^b(X_0) \ar[r, "i_*"] \ar[d, "H_{\cE}"'] & D^b(X) \ar[r, "i^*"]\ar[d, "T_{i_*{\cE}}"] & D^b(X_0) \ar[d,  "H_{\cE}"]\\
             D^b(X_0) \ar[r, "i_*"'] & D^b(X) \ar[r, "i^*"'] & D^b(X_0).
         \end{tikzcd}
     \end{equation}
 \end{theorem}
 
-The main tool for constructing the autoequivalence $H_E$ is the theory of \emph{relative integral functors}.
-An \emph{integral functor} $\Phi_P$, defined with an \emph{integral kernel} $P \in D^b(X \times Y)$, is a functor of the form
+The main tool for constructing the autoequivalence $H_{\cE}$ is the theory of \emph{relative integral functors}.
+An \emph{integral functor} $\Phi_{\cP}$, defined with an \emph{integral kernel} $\cP \in D^b(X \times Y)$, is a functor of the form
 \begin{equation}
-    \Phi_P \colon D^b(X) \to D^b(Y), \quad E \mapsto \pi_{Y*}(P \otimes \pi_X^*E),
+    \Phi_{\cP} \colon D^b(X) \to D^b(Y), \quad \cF \mapsto \pi_{Y*}(\pi_X^*\cF \otimes \cP),
 \end{equation}
 where $X, Y$ are smooth projective varieties and $\pi_X, \pi_Y$ are the projections.
 It was first introduced by Mukai \cite{MR607081} to construct a nontrivial derived equivalence between abelian varieties as mentioned above.
 When an integral functor is an equivalence, it is also called a \emph{Fourier--Mukai transform}.
 A relative integral functor is a generalization of this concept to the case when $X$ and $Y$ are defined over a common base $T$.
-In this version of integral functors, the projections are replaced by the relative ones $X \times_T Y \to X$ and $X \times_T Y \to Y$, and the kernel $P$ is taken from $D^b(X \times_T Y)$.
+In this version of integral functors, the projections are replaced by the relative ones $X \times_T Y \to X$ and $X \times_T Y \to Y$, and the kernel $\cP$ is taken from $D^b(X \times_T Y)$.
 
 One useful feature of relative integral functors is that we can take their ``restriction to fibers'' (or ``base change'') to obtain functors between the derived category of fibers $D^b(X_0) \to D^b(Y_0)$.
 This operation is achieved by restricting the integral kernels to $D^b(X_0 \times Y_0)$, and the resulting functor satisfies the desired property \eqref{eq:half-spherical-twist-commutative-diagram} of half-spherical twists.
-Thus, the autoequivalence $H_E$ shall be defined as a ``restriction to fiber'' of the twist $T_{i_*E}$ after verifying that $T_{i_*E}$ is a relative integral functor (Proposition \ref{prop:twist-functor-is-in-FM}).
-To check this, inspired by the argument in \cite{MR2200048}, we construct a relative integral kernel $P'_E \in D^b(X \times_T X)$ for $T_{i_*E}$ by using Grothendieck duality and several compatibilities.
+Thus, the autoequivalence $H_{\cE}$ shall be defined as a ``restriction to fiber'' of the twist $T_{i_*{\cE}}$ after verifying that $T_{i_*{\cE}}$ is a relative integral functor (Proposition \ref{prop:twist-functor-is-in-FM}).
+To check this, inspired by the argument in \cite{MR2200048}, we construct a relative integral kernel $\cP'_{\cE} \in D^b(X \times_T X)$ for $T_{i_*{\cE}}$ by using Grothendieck duality and several compatibilities.
 
 
 
@@ -203,25 +210,25 @@ Some interesting examples of half-spherical twists arise from flat but not neces
 Among such families, we mainly focus on elliptic surfaces and their singular fibers, often referred to as the \emph{Kodaira fibers}.
 Let $X$ be an elliptic surface $X$ and $X_0$ be a singular fiber.
 If $X_0$ is reducible, then each irreducible component $G$ of $X_0$ is a $(-2)$-curve on $X$ and its structure sheaf $\cO_G$ becomes a spherical object in $D^b(X)$ so that Theorem \ref{thm:main-theorem-1-half-spherical-twist} provides the half-spherical twist $H_{\cO_G}$.
-The properties of $H_{\cO_G}$ can be studied, especially for Kodaira fibers of type $\rom{1}_n$, through \emph{homological mirror symmetry (HMS)} for punctured tori.
+The properties of $H_{\cO_G}$ can be studied, especially for Kodaira fibers of type $\rom{1}_n$, through \emph{homological mirror symmetry (HMS)} for punctured tori \cite{MR3663596} (Theorem \ref{thm:mirror-symmetry-for-F_n}).
 It relates the derived category of the type $\rom{1}_n$ Kodaira fiber to the Fukaya category of $n$-punctured $2$-torus $T_n$.
 Our second result (Theorem \ref{thm:half-spherical-twist-and-half-twist}) identities the autoequivalence $H_{\cO_G}$ to a
 \emph{half twist} (see Section \ref{subsection:Dehn-twists-and-mapping-class-groups} for definition) on $T_n$.
 
 \begin{theorem}[Theorem \ref{thm:half-spherical-twist-and-half-twist}]\label{thm:main-theorem-2-half-twist}
     Suppose $X$ is an elliptic surface and $X_0$ is a reducible fiber of type $\rom{1}_n$.
-    Let $G \subset X_0$ be an irreducible component, $T_n$ be the $n$-punctured $2$-torus, and $\gamma_{\cO_G}$ be the curve on $T_n$ corresponding to $\cO_G$ via homological mirror symmetry $D^b(X_0) \cong D^b(\cW(T_n))$ \cite{MR3663596}.
+    Let $G \subset X_0$ be an irreducible component, $T_n$ be the $n$-punctured $2$-torus, and $\gamma_{\cO_G}$ be the curve on $T_n$ corresponding to $\cO_G$ via homological mirror symmetry $D^b(X_0) \cong D^b(\cW(T_n))$.
     Then the half-spherical twist $H_{\cO_G}$ corresponds to the half twist $h_{\gamma_{\cO_G}}$ along $\gamma_{\cO_G}$ on $T_n$.
     In other words, it is mapped to $h_{\gamma_{\cO_G}}$ by the morphism
     \begin{equation}
         \Upsilon \colon \Auteq{D^b(X_0)} \to \MCG(T_n)
     \end{equation}
-    defined in \cite{2020arXiv201108288O}.
+    defined in \cite{2020arXiv201108288O} (see Theorem \ref{thm:autoequivalence-of-I_n-curve}).
 \end{theorem}
 The term \emph{half-spherical twists} is motivated by this result, as the original spherical twists are named after their analogy to Dehn twists.
 The proof of Theorem \ref{thm:main-theorem-2-half-twist} relies on the following two key facts:
 \begin{enumerate}
-    \item[(A)] An element of the mapping class group of $T_n$ is completely determined by its action on $\pi_1(T_n)$ (this is a part of Dehn--Nielsen--Baer theorem, see \cite[Chapter 8]{MR2850125} for instance).
+    \item[(A)] An element of the mapping class group of $T_n$ is completely determined by its action on $\pi_1(T_n)$ (this is a part of Dehn--Nielsen--Baer theorem, see Theorem \ref{thm:Dehn--Nielsen--Baer}).
     \item[(B)] HMS provides the correspondences between indecomposable objects of $D^b(X_0)$ and homotopy classes of curves on $T_n$ (along with some additional data), and between dimensions of $\Hom$-spaces in $D^b(X_0)$ and intersection numbers of curves on $T_n$.
 \end{enumerate}
 Our strategy consists of the following steps.
@@ -310,7 +317,7 @@ Let $X$ be a scheme.
     \item $D(X)$ is the full subcategory of $D(\cO_X)$ consisting of complexes with coherent cohomologies.
     \item $D_{qc}^*(X)$ and $D^*(X)$ are the full subcategories of $D_{qc}(X)$ and $D(X)$ consisting of complexes with bounded cohomologies, where $* = +$, $-$, and $b$ stand for bounded below, bounded above, and bounded, respectively.
     \item $\Perf(X)$ is the full subcategory of $D(\cO_X)$ consisting of perfect complexes.
-    \item For a complex $F \in D(\cO_X)$, its $i$-th cohomology sheaf is denoted by $\cH^i(F)$.
+    \item For a complex $\cF \in D(\cO_X)$ and $i \in \bZ$, its $i$-th cohomology sheaf is denoted by $\cH^i(\cF)$.
 \end{enumerate}
 
 
@@ -422,9 +429,9 @@ As an application of the tor-independent base change theorem, we have the follow
 \begin{proposition}[Kunneth formula]
     Let $k$ be a field.
     Let $f \colon Y \to X$ be a morphism of $k$-schemes and let $g = f\times f \colon Y \times Y \to X \times X$.
-    Then for $M, N \in D_{qc}(Y)$, there is a natural isomorphism
+    Then for $\cF, \cG \in D_{qc}(Y)$, there is a natural isomorphism
     \begin{equation}
-        f_*M \boxtimes f_*N \xrightarrow{\sim} g_*(M \boxtimes N).
+        f_*\cF \boxtimes f_*\cG \xrightarrow{\sim} g_*(\cF \boxtimes \cG).
     \end{equation}
     % as the adjoint to
     % \begin{equation}
@@ -446,17 +453,17 @@ As an application of the tor-independent base change theorem, we have the follow
     All the squares are tor-independent by Lemma \ref{lem:tor-independent-situations} and the flatness of the projections.
     Then we have
     \begin{align*}
-        f_*M \boxtimes f_*N & = \pi_1^*f_*M \otimes \pi_2^*f_*N                      \\
-                            & \xrightarrow{\sim} f_{1*}p_1^*M \otimes f_{2*}p_2^*N   \\
-                            & \xrightarrow{\sim}g_*(g_1^*p_1^*M \otimes g_2^*p_2^*N) \\
-                            & = g_*(M \boxtimes N)
+        f_*\cF \boxtimes f_*\cG & = \pi_1^*f_*\cF \otimes \pi_2^*f_*\cG                      \\
+                                & \xrightarrow{\sim} f_{1*}p_1^*\cF \otimes f_{2*}p_2^*\cG   \\
+                                & \xrightarrow{\sim}g_*(g_1^*p_1^*\cF \otimes g_2^*p_2^*\cG) \\
+                                & = g_*(\cF \boxtimes \cG)
     \end{align*}
     by the tor-independent base change theorem.
 \end{proof}
 \begin{remark}
     We can check that the Kunneth formula isomorphism is the adjoint to the canonical morphism
     \begin{equation}
-        g^*(f_*M \boxtimes f_*N) \cong f^*f_*M \boxtimes f^*f_*N \to M \boxtimes N.
+        g^*(f_*\cF \boxtimes f_*\cG) \cong f^*f_*\cF \boxtimes f^*f_*\cG \to \cF \boxtimes \cG.
     \end{equation}
 \end{remark}
 
@@ -480,24 +487,24 @@ the twisted inverse image functor $f^!$ is defined to be the composition
 
 \begin{theorem}[Grothendieck duality, {\cite[\href{https://stacks.math.columbia.edu/tag/0AU3}{Tag 0AU3}]{stacks-project}}]\label{grothendieck_duality}
     Let $f \colon X \to Y$ be a proper morphism between noetherian schemes.
-    Then for $M \in D^-(X)$ and $N \in D_{qc}^+(Y)$ we have a natural isomorphism
+    Then for $\cF \in D^-(X)$ and $\cG \in D_{qc}^+(Y)$ we have a natural isomorphism
     \begin{equation}\label{eq:grothendieck_duality}
-        f_*\CHom_X(M, f^!N) \xrightarrow{\sim} \CHom_Y(f_*M, N).
+        f_*\CHom_X(\cF, f^!\cG) \xrightarrow{\sim} \CHom_Y(f_*\cF, \cG).
     \end{equation}
 
 \end{theorem}
 \begin{remark}\label{remark:grothendieck-duality-isomorphism}
-    For any $f \colon X \to Y$ and $A, B \in D(\cO_X)$, there is a natural morphism
+    For any $f \colon X \to Y$ and $\cF, \cG \in D(\cO_X)$, there is a natural morphism
     \begin{equation}\label{eq:push-forward-hom}
-        f_*\CHom_X(A, B) \to \CHom_Y(f_*A, f_*B)
+        f_*\CHom_X(\cF, \cG) \to \CHom_Y(f_*\cF, f_*\cG)
     \end{equation}
     that is adjoint to the composition of the ``relative cup product'' (see Definition \ref{def:relative-cup-product}) and the natural pairing
     \begin{equation}
-        f_*\CHom_X(A, B) \otimes f_*B \to f_*(\CHom_X(A, B) \otimes B) \to f_*B.
+        f_*\CHom_X(\cF, \cG) \otimes f_*\cG \to f_*(\CHom_X(\cF, \cG) \otimes \cG) \to f_*\cG.
     \end{equation}
     The isomorphism of Grothendieck duality is given by
     \begin{equation}
-        f_*\CHom_X(M, f^!N) \to \CHom_Y(f_*M, f_*f^!N) \to \CHom_Y(f_*M, N),
+        f_*\CHom_X(\cF, f^!\cG) \to \CHom_Y(f_*\cF, f_*f^!\cG) \to \CHom_Y(f_*\cF, \cG),
     \end{equation}
     where the first morphism is \eqref{eq:push-forward-hom} and the second one is the post-composite of the counit morphism $f^!f_*=f^\times f_* \to \id$.
     Note that $f^\times = f^!$ holds for proper $f$.
@@ -508,7 +515,7 @@ We review the notion of relatively perfect complexes.
 Our main references are \cite{10.1007/BFb0066287, MR3720794, MR4604981, stacks-project}.
 \begin{definition}
     Let $X, Y$ be a noetherian scheme and $f \colon X \to Y$ be a morphism of finite type.
-    A complex $E \in D^-(X)$ is said to be \emph{$f$-perfect (or relatively perfect to $f$)} if it is locally isomorphic in $D(f^{-1}\cO_Y)$ to a bounded complex of flat $f^{-1}\cO_Y$ modules.
+    A complex $\cF \in D^-(X)$ is said to be \emph{$f$-perfect (or relatively perfect to $f$)} if it is locally isomorphic in $D(f^{-1}\cO_Y)$ to a bounded complex of flat $f^{-1}\cO_Y$ modules.
 \end{definition}
 The above condition is equivalent to the ones in \cite{10.1007/BFb0066287, MR3720794, MR4604981} whenever our definition applies.
 For example, if $f$ is flat and of finite type, then every perfect complex on $X$ is $f$-perfect.
@@ -519,11 +526,11 @@ Note that the notion of relative perfection satisfies the two-out-of-three prope
 We present a useful criterion for relative perfection.
 \begin{proposition}\label{prop:crirtion_for_relative_perfection}
     Let $X, Y$ be a noetherian scheme and $f \colon X \to Y$ be a morphism of finite type.
-    For every complex $E \in D^{-}(X)$, the following are equivalent:
+    For every complex $\cF \in D^{-}(X)$, the following are equivalent:
     \begin{enumerate}
-        \item $E$ is $f$-perfect.
-        \item $E \otimes f^*F$ is bounded for every $F \in D_{qc}^b(Y)$.
-        \item $E \otimes f^*F$ is bounded for every $F \in D^b(Y)$.
+        \item $\cF$ is $f$-perfect.
+        \item $\cF \otimes f^*\cG$ is bounded for every $\cG \in D_{qc}^b(Y)$.
+        \item $\cF \otimes f^*\cG$ is bounded for every $\cG \in D^b(Y)$.
     \end{enumerate}
     In particular, an $f$-perfect complex is automatically in $D^b(X)$.
 \end{proposition}
@@ -731,12 +738,12 @@ We will use the injectivity of $\sigma$ to identify certain elements of mapping 
 \subsection{Fourier--Mukai transforms}\label{subsection:fourier-mukai-transforms}
 Let $T$, $X$, and $Y$ be schemes.
 Let\ $p \colon X \to T$ and $q \colon Y \to T$ be flat and separated morphisms.
-For an object $P \in D_{qc}(X \times_T Y)$, we define the \emph{(relative) integral functor $\Phi_P = \Phi^{X \to Y}_P \colon D_{qc}(X) \to D_{qc}(Y)$ with kernel $P$} by
+For an object $\cP \in D_{qc}(X \times_T Y)$, we define the \emph{(relative) integral functor $\Phi_{\cP} = \Phi^{X \to Y}_P \colon D_{qc}(X) \to D_{qc}(Y)$ with kernel $\cP$} by
 \begin{equation}
-    \Phi_P(-) = \pi_{Y*}(\pi_{X}^*(-) \otimes P),
+    \Phi_{\cP}(-) = \pi_{Y*}(\pi_{X}^*(-) \otimes \cP),
 \end{equation}
 where $\pi_X \colon X \times_T Y \to X$ and $\pi_Y \colon X \times_T Y \to Y$ be the natural projections.
-If an integral functor $\Phi_P$ is an equivalence, then we call $\Phi_P$ a \emph{Fourier--Mukai transform} and $P$ a \emph{Fourier--Mukai kernel}.
+If an integral functor $\Phi_{\cP}$ is an equivalence, then we call $\Phi_{\cP}$ a \emph{Fourier--Mukai transform} and $\cP$ a \emph{Fourier--Mukai kernel}.
 
 \begin{example}
     \begin{enumerate}
@@ -745,26 +752,26 @@ If an integral functor $\Phi_P$ is an equivalence, then we call $\Phi_P$ a \emph
     \end{enumerate}
 \end{example}
 
-The composition $\Phi_Q \circ \Phi_P \colon D_{qc}(X) \to D_{qc}(Z)$ of two integral functors $\Phi_P \colon D_{qc}(X) \to D_{qc}(Y)$ and $\Phi_Q \colon D_{qc}(Y) \to D_{qc}(Z)$  is isomorphic to an integral functor $\Phi_{Q * P}$, where the kernel $Q * P \in D_{qc}(X \times_T Z)$ is the \emph{convolution} of $P$ and $Q$ defined as follows:
+The composition $\Phi_{\cQ} \circ \Phi_{\cP} \colon D_{qc}(X) \to D_{qc}(Z)$ of two integral functors $\Phi_{\cP} \colon D_{qc}(X) \to D_{qc}(Y)$ and $\Phi_{\cQ} \colon D_{qc}(Y) \to D_{qc}(Z)$  is isomorphic to an integral functor $\Phi_{\cQ * \cP}$, where the kernel $\cQ * \cP \in D_{qc}(X \times_T Z)$ is the \emph{convolution} of $P$ and $Q$ defined as follows:
 \begin{equation}
-    Q * P = \pi_{XZ*}(\pi_{XY}^*P \otimes \pi_{YZ}^*Q).
+    \cQ * \cP = \pi_{XZ*}(\pi_{XY}^*\cP \otimes \pi_{YZ}^*\cQ).
 \end{equation}
 Here $\pi_{XY}$, $\pi_{YZ}$, and $\pi_{XZ}$ are the natural projections from $X \times_T Y \times_T Z$ to $X \times_T Y$, $Y \times_T Z$, and $X \times_T Z$, respectively.
 
 The adjoint functors to an integral functor are also given by integral functors under a mild finiteness assumption.
 \begin{theorem}[{\cite{MR3720794}}]\label{thm:adjoint-to-integral-functors}
     Let $T$ be a noetherian scheme.
-    Let $p \colon X \to T$ and $q \colon Y \to T$ be flat and separated morphisms of finite type, and let $P \in D^b(X \times_T Y)$.
+    Let $p \colon X \to T$ and $q \colon Y \to T$ be flat and separated morphisms of finite type, and let $\cP \in D^b(X \times_T Y)$.
     \begin{enumerate}
-        \item Suppose that $Y$ is quasi-projective over $T$. If $P$ is $\pi_X$-perfect and has proper support over $X$, then the integral functor $\Phi_{P_L} \colon D_{qc}(Y) \to D_{qc}(X)$ with the kernel $P_L = \CHom(P, \pi_X^!\cO_X)$ is the left adjoint functor to $\Phi_P$.
-        \item Suppose that $X$ is quasi-projective over $T$. If $P$ is $\pi_Y$-perfect and has proper support over $Y$, then the integral functor $\Phi_{P_R} \colon D_{qc}(Y) \to D_{qc}(X)$ with the kernel $P_R = \CHom(P, \pi_Y^!\cO_Y)$ is the right adjoint functor to $\Phi_P$.
+        \item Suppose that $Y$ is quasi-projective over $T$. If $\cP$ is $\pi_X$-perfect and has proper support over $X$, then the integral functor $\Phi_{\cP_L} \colon D_{qc}(Y) \to D_{qc}(X)$ with the kernel $\cP_L = \CHom(\cP, \pi_X^!\cO_X)$ is the left adjoint functor to $\Phi_{\cP}$.
+        \item Suppose that $X$ is quasi-projective over $T$. If $\cP$ is $\pi_Y$-perfect and has proper support over $Y$, then the integral functor $\Phi_{\cP_R} \colon D_{qc}(Y) \to D_{qc}(X)$ with the kernel $\cP_R = \CHom(\cP, \pi_Y^!\cO_Y)$ is the right adjoint functor to $\Phi_{\cP}$.
     \end{enumerate}
 \end{theorem}
 
 
-We will mainly focus on the case where $X = Y$, $p = q$, and $\Phi_P$ an equivalence (i.e.~ a Fourier--Mukai transform).
+We will mainly focus on the case where $X = Y$, $p = q$, and $\Phi_{\cP}$ an equivalence (i.e.~ a Fourier--Mukai transform).
 Let us introduce the group of invertible integral kernels $\FM_T(X)$.
-By projection formula we have $P * \cO_{\Delta} \cong P \cong \cO_{\Delta} * P$ for the structure sheaf $\cO_{\Delta} = \Delta_{T*}\cO_X$ of the diagonal $\Delta_T \colon X \hookrightarrow X \times_T X$ and any complex $P \in D_{qc}(X \times_T X)$.
+By projection formula we have $\cP * \cO_{\Delta} \cong \cP \cong \cO_{\Delta} * P$ for the structure sheaf $\cO_{\Delta} = \Delta_{T*}\cO_X$ of the diagonal $\Delta_T \colon X \hookrightarrow X \times_T X$ and any complex $\cP \in D_{qc}(X \times_T X)$.
 This means that $\cO_{\Delta}$ is the unit element for the convolution.
 We can also check that the convolution is associative.
 Based on these observations we give the following definition.
@@ -772,30 +779,30 @@ Based on these observations we give the following definition.
     Let $T$ be a scheme and $X \to T$ be a flat separated morphism.
     The group of Fourier--Mukai kernels $\FM_T(X)$ is
     \begin{equation}
-        \FM_T(X) \coloneqq \{P \in D_{qc}(X \times_T X) \mid \text{$P$ is invertible w.r.t.~ the convolution}\}/\cong
+        \FM_T(X) \coloneqq \{\cP \in D_{qc}(X \times_T X) \mid \text{$\cP$ is invertible w.r.t.~ the convolution}\}/\cong
     \end{equation}
     with the group operation being the convolution.
 \end{definition}
 
 There is a natural homomorphism to the group of autoequivalences of $D_{qc}(X)$
 \begin{equation}\label{eq:FM-to-Auteq}
-    \FM_T(X) \to \Auteq(D_{qc}(X)), \quad P \mapsto \Phi_P
+    \FM_T(X) \to \Auteq(D_{qc}(X)), \quad \cP \mapsto \Phi_{\cP}
 \end{equation}
 by definition.
-In a nice situation, the functor $\Phi_P$ restricts to an autoequivalence of the full subcategory $D^b(X) \subset D_{qc}(X)$ and the map $P \mapsto \Phi_P$ is injective by the following claims.
+In a nice situation, the functor $\Phi_{\cP}$ restricts to an autoequivalence of the full subcategory $D^b(X) \subset D_{qc}(X)$ and the map $\cP \mapsto \Phi_{\cP}$ is injective by the following claims.
 \begin{lemma}[{\cite[Proposition 7.4]{MR3861804}}]
     Let $X$ be a noetherian scheme that has enough locally free sheaves (e.g.~ quasi-projective over a field).
     Then every autoequivalence $\Phi \in \Auteq D_{qc}(X)$ preserves the full subcategory $D^b(X) \subset D_{qc}(X)$.
 \end{lemma}
 \begin{lemma}[{\cite[Theorem 1.5]{MR3556457}}]\label{lem:uniqueness-of-FM-kernel}
     Let $k$ be a field and $X$ be a quasi-projective scheme over $k$.
-    Then for every Fourier--Mukai transform $\Phi_P \colon D^b(X) \xrightarrow{\sim} D^b(X)$ the kernel $P \in D_{qc}(X \times_k X)$ is unique up to isomorphism.
+    Then for every Fourier--Mukai transform $\Phi_{\cP} \colon D^b(X) \xrightarrow{\sim} D^b(X)$ the kernel $\cP \in D_{qc}(X \times_k X)$ is unique up to isomorphism.
 \end{lemma}
 \begin{proposition}\label{prop:FM-to-Auteq}
     Let $k$ be a field and $X$ be a quasi-projective scheme over $k$.
     Then there is an injective group homomorphism
     \begin{equation}
-        \FM_k(X) \hookrightarrow \Auteq(D^b(X)), \quad P \mapsto \Phi_P.
+        \FM_k(X) \hookrightarrow \Auteq(D^b(X)), \quad \cP \mapsto \Phi_{\cP}.
     \end{equation}
 \end{proposition}
 \begin{proof}
@@ -807,7 +814,7 @@ The next proposition describes the behavior of Fourier--Mukai transforms when we
     Let $T \to S$ be a flat separated morphism of schemes.
     Then there is an injective group homomorphism
     \begin{equation}
-        \FM_T(X) \hookrightarrow \FM_S(X), \quad P \mapsto \iota_*P,
+        \FM_T(X) \hookrightarrow \FM_S(X), \quad \cP \mapsto \iota_* \cP,
     \end{equation}
     where $\iota \colon X \times_T X \to X \times_S X$ is the natural morphism.
     In addition, the following diagram is commutative:
@@ -830,10 +837,10 @@ The next proposition describes the behavior of Fourier--Mukai transforms when we
 
 
     Let $\Delta_T \colon X \to X \times_T X$ and $\Delta_S \colon X \to X \times_S X$ be the diagonal morphisms.
-    For every $P, Q \in D_{qc}(X \times_T X)$ we have $\iota_*(P * Q) \cong (\iota_*P) * (\iota_*Q)$ by projection formula. We also have $\iota_* \Delta_{T*}\cO_X \cong \Delta_{S*}\cO_X$.
-    Thus, there is a well-defined group homomorphism  $\FM_T(X) \to \FM_S(X), P \mapsto \iota_*P$.
-    To show that it is injective, let $P \in \FM_T(X)$ and assume $\iota_* P \cong \Delta_{S*}\cO_X$.
-    Since $\iota$ is a closed immersion, the isomorphism $\iota_* P \cong \Delta_{S*}\cO_X \cong \iota_*\Delta_{T*}\cO_X$ implies that $P$ is a coherent sheaf and hence $P \cong \Delta_{T*}\cO_X$, which means that the homomorphism is injective.
+    For every $\cP, \cQ \in D_{qc}(X \times_T X)$ we have $\iota_*(\cP * \cQ) \cong (\iota_* \cP) * (\iota_* \cQ)$ by projection formula. We also have $\iota_* \Delta_{T*}\cO_X \cong \Delta_{S*}\cO_X$.
+    Thus, there is a well-defined group homomorphism  $\FM_T(X) \to \FM_S(X), \cP \mapsto \iota_* \cP$.
+    To show that it is injective, let $\cP \in \FM_T(X)$ and assume $\iota_* \cP \cong \Delta_{S*}\cO_X$.
+    Since $\iota$ is a closed immersion, the isomorphism $\iota_* \cP \cong \Delta_{S*}\cO_X \cong \iota_*\Delta_{T*}\cO_X$ implies that $\cP$ is a coherent sheaf and hence $\cP \cong \Delta_{T*}\cO_X$, which means that the homomorphism is injective.
 
     The commutativity of the last diagram follows from the projection formula.
 \end{proof}
@@ -847,12 +854,12 @@ We give a formulation that applies to our setting.
     Let $f \colon X' \to X$ and $\varphi \colon X' \times_{T'} X' \to X \times_T X$ be the natural morphisms.
     Then we have a group homomorphism
     \begin{equation}
-        \FM_T(X) \to \FM_{T'}(X'), \quad P \mapsto \varphi^*P.
+        \FM_T(X) \to \FM_{T'}(X'), \quad \cP \mapsto \varphi^* \cP.
     \end{equation}
-    Moreover, the Fourier--Mukai transforms $\Phi_P$ and $\Phi_{\varphi^*P}$ fit into the following commutative diagram:
+    Moreover, the Fourier--Mukai transforms $\Phi_{\cP}$ and $\Phi_{\varphi^* \cP}$ fit into the following commutative diagram:
     \begin{equation}\label{diagram:restriction-to-fiber}
         \begin{tikzcd}
-            D_{qc}(X') \ar[r, "f_*"] \ar[d, "\Phi_{\varphi^*P}"'] & D_{qc}(X) \ar[r, "f^*"]\ar[d, "\Phi_P"] & D_{qc}(X') \ar[d,  "\Phi_{\varphi^*P}"]\\
+            D_{qc}(X') \ar[r, "f_*"] \ar[d, "\Phi_{\varphi^* \cP}"'] & D_{qc}(X) \ar[r, "f^*"]\ar[d, "\Phi_{\cP}"] & D_{qc}(X') \ar[d,  "\Phi_{\varphi^* \cP}"]\\
             D_{qc}(X') \ar[r, "f_*"'] & D_{qc}(X) \ar[r, "f^*"'] & D_{qc}(X').
         \end{tikzcd}
     \end{equation}
@@ -861,18 +868,18 @@ We give a formulation that applies to our setting.
     Let $\Delta \colon X \to X \times_T X$ and $\Delta' \colon X' \to X' \times_{T'} X'$ be the diagonal morphisms.
     We need to show that
     \begin{enumerate}
-        \item $(\varphi^*P) * (\varphi^*Q) \cong \varphi^*(P*Q)$ for $P, Q \in D_{qc}(X \times_T X)$ and
+        \item $(\varphi^* \cP) * (\varphi^* \cQ) \cong \varphi^*(\cP * \cQ)$ for $\cP, \cQ \in D_{qc}(X \times_T X)$ and
         \item $\varphi^*\Delta_{T*}\cO_X \cong \Delta'_{T'*}\cO_{X'}$.
     \end{enumerate}
     Let $\psi \colon X' \times_{T'} X' \times_{T'} X' \to X \times_T X \times_T X$ be the natural morphism.
     For $i, j \in \{1, 2, 3\}$ let $\pi_{ij} \colon X \times_T X \times_T X \to X \times_T X$ and $p_{ij} \colon X' \times_{T'} X' \times_{T'} X' \to X \times_{T'} X'$ be the natural projections to the $(i, j)$ components.
     Then for $P, Q \in D_{qc}(X \times_T X)$ we have
     \begin{align}
-        (\varphi^*P) * (\varphi^* Q) & =p_{13*}(p_{12}^* \varphi^* P \otimes p_{23}^* \varphi^* Q)   \\
-                                     & \cong p_{13*}(\psi^*\pi_{12}^* P \otimes \psi^* \pi_{23}^* Q) \\
-                                     & \cong p_{13*}\psi^*(\pi_{12}^* P \otimes \pi_{23}^* Q)        \\
-                                     & \cong \varphi^*\pi_{13*}(\pi_{12}^* P \otimes \pi_{23}^* Q)   \\
-                                     & = \varphi^*(P * Q),
+        (\varphi^* \cP) * (\varphi^* \cQ) & =p_{13*}(p_{12}^* \varphi^* \cP \otimes p_{23}^* \varphi^* \cQ)   \\
+                                          & \cong p_{13*}(\psi^*\pi_{12}^* \cP \otimes \psi^* \pi_{23}^* \cQ) \\
+                                          & \cong p_{13*}\psi^*(\pi_{12}^* \cP \otimes \pi_{23}^* \cQ)        \\
+                                          & \cong \varphi^*\pi_{13*}(\pi_{12}^* \cP \otimes \pi_{23}^* \cQ)   \\
+                                          & = \varphi^*(\cP * \cQ),
     \end{align}
     where $p_{13*}\psi^* \cong \varphi^*p_{13*}$ holds by tor-independence of the diagram
     \[
@@ -891,8 +898,8 @@ We give a formulation that applies to our setting.
     Finally, the commutativity of the last diagram \eqref{diagram:restriction-to-fiber} is a consequence of a standard argument using the projection formula and flat base change.
 \end{proof}
 
-We present a criterion to determine when a kernel $P \in D_{qc}(X \times_T X)$ belongs to $\FM_T(X)$.
-Roughly speaking, this criterion says it is enough to check that $\Phi_P$ is an equivalence and whose left (or, equivalently, right) adjoint is also an integral functor.
+We present a criterion to determine when a kernel $\cP \in D_{qc}(X \times_T X)$ belongs to $\FM_T(X)$.
+Roughly speaking, this criterion says it is enough to check that $\Phi_{\cP}$ is an equivalence and whose left (or, equivalently, right) adjoint is also an integral functor.
 It will be used combined with Theorem \ref{thm:adjoint-to-integral-functors}.
 \begin{lemma}\label{lem:criterion-for-invertible-kernel}
     Let $X \to T \to \Spec k$ be morphisms of schemes in which
@@ -902,12 +909,12 @@ It will be used combined with Theorem \ref{thm:adjoint-to-integral-functors}.
         \item $X \to T$ is flat, and
         \item $X \to \Spec k$ is quasi-projective.
     \end{itemize}
-    Let $P \in D_{qc}(X \times_T X)$ and suppose that $\Phi_P \colon D_{qc}(X) \to D_{qc}(X)$ has a left (or right) adjoint that is also an integral functor $\Phi_{Q}$ (with kernel $Q \in D_{qc}(X \times_T X)$).
+    Let $\cP \in D_{qc}(X \times_T X)$ and suppose that $\Phi_{\cP} \colon D_{qc}(X) \to D_{qc}(X)$ has a left (or right) adjoint that is also an integral functor $\Phi_{\cQ}$ (with kernel $\cQ \in D_{qc}(X \times_T X)$).
     Then the following are equivalent:
     \begin{enumerate}
-        \item $P$ is an element of $\FM_T(X)$.
-        \item $\Phi_P \colon D_{qc}(X) \to D_{qc}(X)$ is an equivalence.
-        \item $\Phi_P$ preserves $D^b(X) \subset D_{qc}(X)$ and $\Phi_P \colon D^b(X) \to D^b(X)$ is an equivalence.
+        \item $\cP$ is an element of $\FM_T(X)$.
+        \item $\Phi_{\cP} \colon D_{qc}(X) \to D_{qc}(X)$ is an equivalence.
+        \item $\Phi_{\cP}$ preserves $D^b(X) \subset D_{qc}(X)$ and $\Phi_{\cP} \colon D^b(X) \to D^b(X)$ is an equivalence.
     \end{enumerate}
 \end{lemma}
 \begin{proof}
@@ -916,14 +923,14 @@ It will be used combined with Theorem \ref{thm:adjoint-to-integral-functors}.
 
     We will show (3) $\Rightarrow$ (1).
     Note that $X \to T$ and $T \to \Spec k$ are automatically flat and separated.
-    We only discuss the case where $\Phi_Q$ is the left adjoint to $\Phi_P$ (the right adjoint case is similar).
+    We only discuss the case where $\Phi_{\cQ}$ is the left adjoint to $\Phi_{\cP}$ (the right adjoint case is similar).
     Let $\iota \colon X \times_T X \hookrightarrow X \times_k X$ be the natural inclusion.
     By the assumption and the proof of Proposition \ref{prpo:forget-base} we have
     \begin{equation}
-        \Phi_{\iota_*(P*Q)} \cong \Phi_{\iota_*P} \circ \Phi_{\iota_*Q} \cong \id \cong \Phi_{\Delta_{k*}\cO_X} \cong \Phi_{\iota_*\Delta_{T*}\cO_X} \colon D^b(X) \to D^b(X).
+        \Phi_{\iota_*(\cP * \cQ)} \cong \Phi_{\iota_* \cP} \circ \Phi_{\iota_* \cQ} \cong \id \cong \Phi_{\Delta_{k*}\cO_X} \cong \Phi_{\iota_*\Delta_{T*}\cO_X} \colon D^b(X) \to D^b(X).
     \end{equation}
-    Then $\iota_*(P*Q) \cong \iota_*\Delta_{T*}\cO_X$ holds by Lemma \ref{lem:uniqueness-of-FM-kernel} and again by the proof of Proposition \ref{prpo:forget-base} we have $P * Q \cong \Delta_{T*}\cO_X$.
-    Similarly, we have $Q * P \cong \Delta_{T*}\cO_X$, and we obtain $P \in \FM_T(X)$.
+    Then $\iota_*(\cP * \cQ) \cong \iota_*\Delta_{T*}\cO_X$ holds by Lemma \ref{lem:uniqueness-of-FM-kernel} and again by the proof of Proposition \ref{prpo:forget-base} we have $\cP * \cQ \cong \Delta_{T*}\cO_X$.
+    Similarly, we have $\cQ * \cP \cong \Delta_{T*}\cO_X$, and we obtain $\cP \in \FM_T(X)$.
 \end{proof}
 
 
@@ -934,52 +941,51 @@ We give a proof which applies to quasi-projective and not necessarily smooth var
 \begin{lemma}\label{lem:criterion-to-be-standard-functor}
     Let $k$ be an algebraically closed field of characteristic zero.
     Let $X$ and $Y$ be connected quasi-projective schemes over $k$.
-    Let $P \in D^b(X \times Y)$ be an object whose support is proper over $X$.
-    Suppose that the integral functor $\Phi = \Phi_P$ satisfies the following condition: For any closed point $x \in X$, there exists a closed point $y \in Y$ and an integer $n_x$ such that $\Phi(\cO_x) \cong \cO_y[n_x]$.
-
+    Let $\cP \in D^b(X \times Y)$ be an object whose support is proper over $X$.
+    Suppose that the integral functor $\Phi = \Phi_{\cP}$ satisfies the following condition: For any closed point $x \in X$, there exists a closed point $y \in Y$ and an integer $n_x$ such that $\Phi(\cO_x) \cong \cO_y[n_x]$.
     Then there exists a morphism $\varphi \colon X \to Y$, line bundles $L_1 \in \Pic X$, $L_2 \in \Pic Y$, and an integer $n$ such that $\Phi \cong L_2 \otimes \varphi_*(L_1 \otimes -)[n]$.
 \end{lemma}
 \begin{proof}
     We repeat the proof of \cite[Lemma 2.14]{MR2155085}.
     Let $\pi_X \colon X \times Y \to X$ and $\pi_Y \colon X \times Y \to Y$ be the natural projections and $i_x \colon \{x\} \times Y \hookrightarrow X \times X$ be the natural inclusion for each closed point $x \in X$.
-    From $i_x^*(P) \cong \cO_{(x, y)}[n_x]$, which follows from the assumption, we conclude that the complex $P$ is a shift of coherent sheaf on $X \times Y$ and flat over $X$ (\cite[Lemma 4.3]{MR1651025}).
+    From $i_x^*(\cP) \cong \cO_{(x, y)}[n_x]$, which follows from the assumption, we conclude that the complex $\cP$ is a shift of coherent sheaf on $X \times Y$ and flat over $X$ (\cite[Lemma 4.3]{MR1651025}).
     By Lemma \ref{lem:degree-is-locally-constant} below $x \mapsto n_x$ is a locally constant function on the set of closed points of $X$,
     and hence constant since we assumed $X$ to be connected.
-    Therefore we may assume $n_x=0$ for every $x \in X$ with appropriate shift and $P$ be a coherent sheaf on $X \times Y$ flat over $X$.
+    Therefore we may assume $n_x=0$ for every $x \in X$ with appropriate shift and $\cP$ is just a coherent sheaf on $X \times Y$ flat over $X$.
 
     From here to the end of the proof, the symbols such as $\pi_{X*}$ or $i_*$ denote \emph{non-derived functors}.
     Let $i \colon Z \hookrightarrow X \times Y$ be the schematic support of $P$ and $p_X = \pi_X \circ i$ be the projection to $X$.
-    Note that $P \cong i^*i_*P = i_*(P\vert_Z)$ holds under our notations here.
+    Note that $\cP \cong i^*i_* \cP = i_*(\cP\vert_Z)$ holds under our notations here.
     First, We claim that the canonical morphism
     \begin{equation}\label{eq:canonical_surjection}
-        \pi_X^* \pi_{X*}(P \otimes \pi_Y^*\cO_X(d)) \to P \otimes \pi_Y^*(\cO_X(d))
+        \pi_X^* \pi_{X*}(\cP \otimes \pi_Y^*\cO_X(d)) \to \cP \otimes \pi_Y^*(\cO_X(d))
     \end{equation}
     is surjective for sufficiently large $d$, where $\cO_X(d) = \cO_X(1)^{\otimes d}$ is the multiple of a fixed very ample line bundle on $X$.
     Since the support $Z$ is proper over $X$ and both of them are quasi-projective, the morphism $p_X \colon Z \to X$ is projective. The sheaf $\pi_Y^*\cO_X(1)\vert_Z \eqqcolon \cO_{Z/X}(1)$ gives a very ample line bundle on $Z$ relative to $X$. Therefore we have a surjection
     \begin{equation}
-        p_X^* p_{X*}(P\vert_Z \otimes \cO_{Z/X}(d)) \to P\vert_Z \otimes \cO_{Z/X}(d)
+        p_X^* p_{X*}(\cP\vert_Z \otimes \cO_{Z/X}(d)) \to \cP\vert_Z \otimes \cO_{Z/X}(d)
     \end{equation}
     for large $d$ by \cite[Theorem III 8.8]{MR0463157}.
     By taking its push-forward $i_*$ and using the projection formula, there is a surjective morphism
     \begin{equation}\label{eq:canonical_surjection_2}
-        i_*i^*\pi_X^* \pi_{X*}(P \otimes \pi_Y^*\cO_X(d)) \to P \otimes \pi_Y^*(\cO_X(d)).
+        i_*i^*\pi_X^* \pi_{X*}(\cP \otimes \pi_Y^*\cO_X(d)) \to \cP \otimes \pi_Y^*(\cO_X(d)).
     \end{equation}
     Our claim follows from \eqref{eq:canonical_surjection_2} and the surjection $\id \to i_*i^*$.
 
 
-    By the projection formula we have $\pi_{X*}(P \otimes \pi_Y^* \cO_X(d)) \cong p_{X*}(P\vert_Z \otimes \cO_{Z/X}(d))$ and the latter is a locally free sheaf for large $d$
-    because $p_X \colon Z \to X$ is projective and $P\vert_Z$ is flat over $X$.
+    By the projection formula we have $\pi_{X*}(\cP \otimes \pi_Y^* \cO_X(d)) \cong p_{X*}(P\vert_Z \otimes \cO_{Z/X}(d))$ and the latter is a locally free sheaf for large $d$
+    because $p_X \colon Z \to X$ is projective and $\cP\vert_Z$ is flat over $X$.
     It has rank one by
     \begin{equation}
-        \pi_{X}(P \otimes \pi_Y^* \cO_X(d))\vert_{\{x\}} \cong H^0((P \otimes \pi_Y^* \cO_X(d))\vert_{\{x\} \times Y}) \cong H^0(\cO_{(x, y)}) \cong k,
+        \pi_{X}(\cP \otimes \pi_Y^* \cO_X(d))\vert_{\{x\}} \cong H^0((\cP \otimes \pi_Y^* \cO_X(d))\vert_{\{x\} \times Y}) \cong H^0(\cO_{(x, y)}) \cong k,
     \end{equation}
-    where the first isomorphism is flat base change and the second follows from $i_x^*(P) \cong \cO_{(x, y)}$.
+    where the first isomorphism is flat base change and the second follows from $i_x^*(\cP) \cong \cO_{(x, y)}$.
     Therefore the surjection \eqref{eq:canonical_surjection} gives rise to the surjection
     \begin{equation}\label{eq:surjection}
-        \cO_{X \times Y} \to P \otimes \pi_X^*L^\vee \otimes \pi_Y^*(\cO_X(d)),
+        \cO_{X \times Y} \to \cP \otimes \pi_X^*L^\vee \otimes \pi_Y^*(\cO_X(d)),
     \end{equation}
-    in which $L$ denotes the line bundle $\pi_{X*}(P \otimes \pi_Y^* \cO_X(d))$.
-    The sheaf $P \otimes \pi_X^*L^\vee \otimes \pi_Y^*(\cO_X(d))$ is flat over $X$ and there is an isomorphism
+    in which $L$ denotes the line bundle $\pi_{X*}(\cP \otimes \pi_Y^* \cO_X(d))$.
+    The sheaf $\cP \otimes \pi_X^*L^\vee \otimes \pi_Y^*(\cO_X(d))$ is flat over $X$ and there is an isomorphism
     \begin{equation}
         (P \otimes \pi_X^*L^\vee \otimes \pi_Y^*(\cO_X(d)))\vert_{x \times Y} \cong \cO_{(x, y)}.
     \end{equation}
@@ -989,8 +995,8 @@ We give a proof which applies to quasi-projective and not necessarily smooth var
     \end{equation}
     Under the identification $Y \cong \Hilb_{Y}^1$ and $\cU \cong \cO_{\Delta_{Y}}$ we have
     \begin{align}
-        P & \cong (\varphi \times \id)^*\cO_{\Delta_{Y}} \otimes \pi_X^*L \otimes \pi_Y^*(\cO_X(d))^\vee \\
-          & \cong \cO_{\Gamma_\varphi} \otimes \pi_X^*L \otimes \pi_Y^*(\cO_X(d))^\vee,
+        \cP & \cong (\varphi \times \id)^*\cO_{\Delta_{Y}} \otimes \pi_X^*L \otimes \pi_Y^*(\cO_X(d))^\vee \\
+            & \cong \cO_{\Gamma_\varphi} \otimes \pi_X^*L \otimes \pi_Y^*(\cO_X(d))^\vee,
     \end{align}
     where $\Gamma_\varphi$ is the graph of $\varphi$.
     This concludes the proof.
@@ -998,11 +1004,11 @@ We give a proof which applies to quasi-projective and not necessarily smooth var
 
 \begin{lemma}\label{lem:degree-is-locally-constant}
     Let $k$ be an algebraically closed field of characteristic zero.
-    Let $X$ and $Y$ be schemes of finite type over $k$ and $P \in D^b(X \times Y)$ be an object whose support is proper over $X$.
+    Let $X$ and $Y$ be schemes of finite type over $k$ and $\cP \in D^b(X \times Y)$ be an object whose support is proper over $X$.
     Let $i_x \colon \{x\} \times Y \hookrightarrow X \times Y$ be the natural inclusion for a closed point $x \in X$.
     Then the set
     \begin{equation}
-        \left\{x \in X \mid x\text{ is a closed point, }\cH^m(i_x^*P) = 0 \text{ unless } m \neq 0\right\}
+        \left\{x \in X \mid x\text{ is a closed point, }\cH^m(i_x^*\cP) = 0 \text{ unless } m \neq 0\right\}
     \end{equation}
     is the set of closed points of an open subset of $X$.
 \end{lemma}
@@ -1018,27 +1024,27 @@ We give a proof which applies to quasi-projective and not necessarily smooth var
         \end{tikzcd}
     \]
     where $\overline{i_x}$ is the natural inclusion.
-    The push-forward $\overline{P} = (\id \times \iota)_*P$ is an object of $D^b(X \times \overline{Y})$ by the assumption of proper support and hence the statement holds for $X$, $\overline{Y}$, and $\overline{P}$.
+    The push-forward $\overline{\cP} = (\id \times \iota)_* \cP$ is an object of $D^b(X \times \overline{Y})$ by the assumption of proper support and hence the statement holds for $X$, $\overline{Y}$, and $\overline{\cP}$.
     Therefore it is enough to show the equivalence
     \begin{equation}
-        \cH^m(i_x^*P) = 0 \Leftrightarrow \cH^m(\overline{i_x}^*(\overline{P})) = 0
+        \cH^m(i_x^* \cP) = 0 \Leftrightarrow \cH^m(\overline{i_x}^*(\overline{\cP})) = 0
     \end{equation}
     for every $m \in \bZ$.
 
 
 
-    Since $\iota$ is an open immersion (and hence flat), there is the base change isomorphism $\overline{i_x}^*(\overline{P}) \cong \iota_*i_x^*P$.
-    Let $j \colon Z \hookrightarrow Y \cong \{x\} \times Y$ be the schematic support of $i_x^*P$.
-    It is proper over $k$ and $i_x^*P \cong j_*Q$ for some $Q \in D^b(Z)$ (\cite[\href{https://stacks.math.columbia.edu/tag/0CYK}{Tag 0CYK}]{stacks-project}).
+    Since $\iota$ is an open immersion (and hence flat), there is the base change isomorphism $\overline{i_x}^*(\overline{\cP}) \cong \iota_*i_x^* \cP$.
+    Let $j \colon Z \hookrightarrow Y \cong \{x\} \times Y$ be the schematic support of $i_x^* \cP$.
+    It is proper over $k$ and $i_x^* \cP \cong j_* \cQ$ for some $\cQ \in D^b(Z)$ (\cite[\href{https://stacks.math.columbia.edu/tag/0CYK}{Tag 0CYK}]{stacks-project}).
     The inclusions $j$ and $\iota \circ j$ are closed immersions because of the properness of $Z$.
     There are isomorphisms
     \begin{equation}
-        \cH^m(i_x^*P) \cong \cH^m(j_*Q) \cong j_*\cH^m(Q),
+        \cH^m(i_x^* \cP) \cong \cH^m(j_* \cQ) \cong j_*\cH^m(\cQ),
     \end{equation}
     \begin{equation}
-        \cH^m(\overline{i_x}^*(\overline{P})) \cong \cH^m(\iota_*i_x^*P) \cong \cH^m(\iota_*j_*Q) \cong \iota_*j_*\cH^m(Q),
+        \cH^m(\overline{i_x}^*(\overline{\cP})) \cong \cH^m(\iota_*i_x^* \cP) \cong \cH^m(\iota_*j_* \cQ) \cong \iota_*j_*\cH^m(\cQ),
     \end{equation}
-    and the vanishing of $j_*\cH^m(Q)$ and $\iota_*j_*\cH^m(Q)$ are both equivalent to the vanishing of $\cH^m(Q)$.
+    and the vanishing of $j_*\cH^m(\cQ)$ and $\iota_*j_*\cH^m(\cQ)$ are both equivalent to the vanishing of $\cH^m(\cQ)$.
     It finishes the proof.
 \end{proof}
 
@@ -1051,37 +1057,37 @@ Let $X$ be a quasi-projective Gorenstein scheme over a field $k$ and $f \colon X
 We assume $X$ to be connected (or more generally equidimensional) with $\dim X = d$.
 The dualizing complex $f^!\cO_{\Spec k}$ is of the form $\omega_X[-d]$ for some line bundle $\omega_X$ on $X$, which is called the \emph{canonical bundle} of $X$.
 \begin{definition}[{\cite{MR1831820}}]
-    We say $E \in D^b(X)$ is a \emph{($d$-)spherical object} if
+    We say $\cE \in D^b(X)$ is a \emph{($d$-)spherical object} if
     \begin{enumerate}
-        \item $E$ is perfect and has proper support,
-        \item $E \otimes \omega_X \cong E$, and
-        \item $\Ext^*_X(E, E) \cong k \oplus k[-d]$.
+        \item $\cE$ is perfect and has proper support,
+        \item $\cE \otimes \omega_X \cong \cE$, and
+        \item $\Ext^*_X(\cE, \cE) \cong k \oplus k[-d]$.
     \end{enumerate}
 \end{definition}
 
 \begin{theorem}[{\cite{MR1831820}}]
-    Let $E \in D^b(X)$ be a spherical object.
-    Let $T_E = \Phi_{P_E}$ be the integral functor with the kernel
+    Let $\cE \in D^b(X)$ be a spherical object.
+    Let $T_{\cE} = \Phi_{P_{\cE}}$ be the integral functor with the kernel
     \begin{equation}
-        P_E = \Cone(E^\vee \boxtimes E \xrightarrow{\ev} \Delta_{k*}\cO_X),
+        P_{\cE} = \Cone(\cE^\vee \boxtimes \cE \xrightarrow{\ev} \Delta_{k*}\cO_X),
     \end{equation}
     where the natural ``evaluation'' morphism $\ev$ is the composition of
     \begin{enumerate}
-        \item the restriction $E^\vee \boxtimes E \to \Delta_{k*}(E^\vee \otimes E)$ and
-        \item $\Delta_{k*}(E^\vee \otimes E) \to \Delta_{k*}\cO_X$ induced by the natural pairing $E^\vee \otimes E \to \cO_X$.
+        \item the restriction $\cE^\vee \boxtimes \cE \to \Delta_{k*}(\cE^\vee \otimes \cE)$ and
+        \item $\Delta_{k*}(\cE^\vee \otimes \cE) \to \Delta_{k*}\cO_X$ induced by the natural pairing $\cE^\vee \otimes \cE \to \cO_X$.
     \end{enumerate}
-    Then $T_E$ is an autoequivalence of $D^b(X)$.
+    Then $T_{\cE}$ is an autoequivalence of $D^b(X)$.
 \end{theorem}
-The autoequivalence $T_E$ is called the \emph{twist functor (or spherical twist) along $E$}.
+The autoequivalence $T_{\cE}$ is called the \emph{twist functor (or spherical twist) along $\cE$}.
 We remark that there is an exact triangle
 \begin{equation}
-    \Ext^*_X(E, F)\otimes_k E \to F \to T_E(F) \xrightarrow{+1}
+    \Ext^*_X(\cE, \cF)\otimes_k \cE \to \cF \to T_{\cE}(\cF) \xrightarrow{+1}
 \end{equation}
-for every $F \in D^b(X)$.
+for every $\cF \in D^b(X)$.
 As an immediate consequence of this triangle, we have the following.
 \begin{corollary}\label{cor:orthogonal-to-spherical}
-    Let $F \in \langle E \rangle^\perp = \{F \mid \Ext^*_X(E, F) = 0\} \subset D^b(X)$ be an object that is right orthogonal to $E$ (e.g. $\Supp F \cap \Supp E = \emptyset$).
-    Then $T_E(F) \cong F$.
+    Let $\cF \in \langle \cE \rangle^\perp = \{\cF \mid \Ext^*_X(\cE, \cF) = 0\} \subset D^b(X)$ be an object that is right orthogonal to $\cE$ (e.g. $\Supp \cF \cap \Supp \cE = \emptyset$).
+    Then $T_{\cE}(\cF) \cong \cF$.
 \end{corollary}
 \begin{example}[{\cite{MR1831820}}]\label{ex:spherical-objects}
     \begin{enumerate}
@@ -1094,7 +1100,7 @@ As an immediate consequence of this triangle, we have the following.
 \begin{proposition}[{\cite[Proposition 3.15]{MR1831820}}]\label{prop:exceptional-to-spherical}
     Let $X$ be a smooth quasi-projective variety and $\iota \colon Y \hookrightarrow X$ be a projective hypersurface.
     Assume $\iota^*\omega_X$ is trivial.
-    If $E \in \Perf(Y)$ is an \emph{exceptional object} (i.e.~ $\Ext^*_X(E, E) \cong k$), then $\iota_*E \in D^b(X)$ is a spherical object.
+    If $\cE \in \Perf(Y)$ is an \emph{exceptional object} (i.e.~ $\Ext^*_X(\cE, \cE) \cong k$), then $\iota_* \cE \in D^b(X)$ is a spherical object.
 \end{proposition}
 \begin{example}\label{ex:spherical-object-from-K3-degeneration}
     Let $\pi \colon X \to C$ be a type \rom{3} degeneration of K3 surfaces (over $\bC$) \cite{}.
@@ -1119,13 +1125,13 @@ As an immediate consequence of this triangle, we have the following.
 \end{example}
 The following basic properties of twist functors will be useful for us.
 \begin{lemma}
-    Let $E, E_1, E_2$ be spherical objects on $X$.
+    Let $\cE, \cE'$ be spherical objects in $D^b(X)$.
     \begin{enumerate}
         \item For any equivalence $\Phi \in \Auteq{D^b(X)}$, we have \begin{equation}
-                  \Phi \circ T_E \circ \Phi^{-1} \cong T_{\Phi(E)}.
+                  \Phi \circ T_{\cE} \circ \Phi^{-1} \cong T_{\Phi(\cE)}.
               \end{equation}
-        \item If $\Ext^*_X(E_1, E_2) = 0$, then $T_{E_1}T_{E_2} \cong T_{E_2}T_{E_1}$.
-        \item If $\dim \sum_i \Ext_X^i(E_1, E_2) = 1$, then $T_{E_1}T_{E_2} T_{E_1} \cong T_{E_2}T_{E_1}T_{E_2}$.
+        \item If $\Ext^*_X(\cE, \cE') = 0$, then $T_{\cE}T_{\cE'} \cong T_{\cE'}T_{\cE}$.
+        \item If $\dim \sum_i \Ext_X^i(\cE, \cE') = 1$, then $T_{\cE}T_{\cE'} T_{\cE} \cong T_{\cE'}T_{\cE}T_{\cE'}$.
     \end{enumerate}
 \end{lemma}
 \begin{proof}
@@ -1143,7 +1149,7 @@ In this section, we prove Theorem \ref{thm:main-theorem-1-half-spherical-twist} 
 We introduce some natural morphisms and commutative diagrams of schemes that will be used in the next subsection.
 
 \begin{definition}[relative cup product]\label{def:relative-cup-product}
-    Let $f \colon X \to Y$ be a morphism of schemes. The \emph{relative cup product morphism} $$p = p_{M, N} \colon f_*M \otimes f_*N \to f_*(M \otimes N)$$ for $M, N \in D_{qc}(X)$ is the adjoint to the canonical morphism $$f^*(f_*M \otimes f_*N) \cong f^*f_*M \otimes f^*f_*N \to M \otimes N$$ which is induced from the counit morphism $f^*f_* \to \id$.
+    Let $f \colon X \to Y$ be a morphism of schemes. The \emph{relative cup product morphism} $$p = p_{\cF, \cG} \colon f_*\cF \otimes f_*\cG \to f_*(\cF \otimes \cG)$$ for $\cF, \cG \in D_{qc}(X)$ is the adjoint to the canonical morphism $$f^*(f_*\cF \otimes f_*\cG) \cong f^*f_*\cF \otimes f^*f_*\cG \to \cF \otimes \cG$$ which is induced from the counit morphism $f^*f_* \to \id$.
 \end{definition}
 \begin{proposition}\label{prop:Kunneth-and-cup-product}
     Let $k$ be a field.
@@ -1156,11 +1162,11 @@ We introduce some natural morphisms and commutative diagrams of schemes that wil
         \end{tikzcd}
     \]
     where $\Delta$ and $\delta$ are the diagonal morphisms.
-    Then for any $M, N \in D_{qc}(X')$, we have a commutative diagram
+    Then for any $\cF, \cG \in D_{qc}(X')$, we have a commutative diagram
     \[
         \begin{tikzcd}
-            f_*M \boxtimes f_*N \arrow[rr, "\text{restriction}"]\arrow[d, "\text{Kunneth formula}"', "\sim"]&&\Delta_*(f_*M \otimes f_*N)\arrow[d, "\Delta_*(\text{relaive cup product})"]\\
-            g_*(M \boxtimes N) \arrow[r, "\text{restriction}"']&g_*\delta_*(M \otimes N) \arrow[r, "\sim", sloped]&\Delta_*(f_*(M \otimes N)).
+            f_*\cF \boxtimes f_*\cG \arrow[rr, "\text{restriction}"]\arrow[d, "\text{Kunneth formula}"', "\sim"]&&\Delta_*(f_*\cF \otimes f_*\cG)\arrow[d, "\Delta_*(\text{relaive cup product})"]\\
+            g_*(\cF \boxtimes \cG) \arrow[r, "\text{restriction}"']&g_*\delta_*(\cF \otimes \cG) \arrow[r, "\sim", sloped]&\Delta_*(f_*(\cF \otimes \cG)).
         \end{tikzcd}
     \]
 \end{proposition}
@@ -1169,12 +1175,12 @@ We introduce some natural morphisms and commutative diagrams of schemes that wil
     the statement is equivalent to the commutativity of the upper square of the diagram
     \[
         \begin{tikzcd}
-            f_*M \otimes f_*N \arrow[rr, equal]\arrow[d, "\varphi"]&&f_*M \otimes f_*N\arrow[d, "p_{M, N}"]\\
-            \Delta^*g_*(M \boxtimes N) \arrow[r]\dar&\Delta^*g_*\delta_*\delta^*(M \boxtimes N) \arrow[r]\dar&f_*(M \otimes N)\dar["\sim", sloped]\\
-            f_*\delta^*(M \boxtimes N) \rar & f_*\delta^*\delta_*\delta^*(M\boxtimes N) \rar & f_*\delta^*(M \boxtimes N),
+            f_*\cF \otimes f_*\cG \arrow[rr, equal]\arrow[d, "\varphi"]&&f_*\cF \otimes f_*\cG\arrow[d, "p_{\cF, \cG}"]\\
+            \Delta^*g_*(\cF \boxtimes \cG) \arrow[r]\dar&\Delta^*g_*\delta_*\delta^*(\cF \boxtimes \cG) \arrow[r]\dar&f_*(\cF \otimes \cG)\dar["\sim", sloped]\\
+            f_*\delta^*(\cF \boxtimes \cG) \rar & f_*\delta^*\delta_*\delta^*(\cF\boxtimes \cG) \rar & f_*\delta^*(\cF \boxtimes \cG),
         \end{tikzcd}
     \]
-    where $\varphi$ is the adjoint to the Kunneth formula isomorphism and $p_{M, N}$ is the relative cup product morphism.
+    where $\varphi$ is the adjoint to the Kunneth formula isomorphism and $p_{\cF, \cG}$ is the relative cup product morphism.
     The lower squares, given by the natural morphisms $\Delta^*g_* \to f_*\delta^*$,
     $\id \to \delta_*\delta^*$,
     and $\delta^*\delta_* \to \id$, are commutative for the obvious reasons.
@@ -1182,7 +1188,7 @@ We introduce some natural morphisms and commutative diagrams of schemes that wil
     We can check that
     \begin{enumerate}
         \item the bottom edge of the outer square is the identity morphism by standard arguments of adjunctions, and
-        \item the left vertical morphism is identified with $p_{M, N}$ via $f_*(M \otimes N) \cong f_*\delta^*(M \boxtimes N)$, by definition of $\varphi$ and $p_{M, N}$.
+        \item the left vertical morphism is identified with $p_{\cF, \cG}$ via $f_*(\cF \otimes \cG) \cong f_*\delta^*(\cF \boxtimes \cG)$, by definition of $\varphi$ and $p_{\cF, \cG}$.
     \end{enumerate}
     This finishes the proof.
 \end{proof}
@@ -1190,22 +1196,22 @@ We introduce some natural morphisms and commutative diagrams of schemes that wil
 
 \begin{proposition}\label{prop:relative-cup-product-and-Grothendieck-duality}
     Let $f \colon X' \to X$ be a proper morphism between noetherian schemes.
-    Then for any $N, N \in D^b(X')$, we have a commutative diagram
+    Then for any $\cF \in D^b(X')$ and $\cG \in D^b(X)$, we have a commutative diagram
     \[
         \begin{tikzcd}
-            \CHom(f_*M, N)\otimes f_*M \ar[r, "\text{pairng}"] & N \\
-            f_*\CHom(M, f^!N)\otimes f_*M \ar[d, "\text{relative cup product}"']\ar[u, "\text{Grothendieck duality}"]& f_*f^!N \ar[u, "\text{counit}"'] \\
-            f_*(\CHom(M, f^!N)\otimes M) \ar[ru, out=0, in=-90, "\text{pairing}"'] & \quad .
+            \CHom(f_*\cF, \cG)\otimes f_*\cF \ar[r, "\text{pairng}"] & \cG \\
+            f_*\CHom(\cF, f^!\cG)\otimes f_*\cF \ar[d, "\text{relative cup product}"']\ar[u, "\text{Grothendieck duality}"]& f_*f^!\cG \ar[u, "\text{counit}"'] \\
+            f_*(\CHom(\cF, f^!\cG)\otimes \cF) \ar[ru, out=0, in=-90, "\text{pairing}"'] & \quad .
         \end{tikzcd}
     \]
 \end{proposition}
 \begin{proof}
-    By the adjunction $(-\otimes f_*M) \dashv \CHom(f_*M, -)$, the statement is equivalent to the commutativity of the diagram
+    By the adjunction $(-\otimes f_*\cF) \dashv \CHom(f_*\cF, -)$, the statement is equivalent to the commutativity of the diagram
     \[
         \begin{tikzcd}
-            \CHom(f_*M, N) \ar[r, equal] & \CHom(f_*M, N)\\
-            f_*\CHom(M, f^!N) \ar[u, "\text{Grothendieck duality}"]\ar[d]& \CHom(f_*M, f_*f^!N)\ar[u, "(\text{counit}) \circ -"']\\
-            \CHom(f_*M, f_*(\CHom(M, f^!N)\otimes M)) \ar[ru, out=0, in=-90]& \quad,
+            \CHom(f_*\cF, \cG) \ar[r, equal] & \CHom(f_*\cF, \cG)\\
+            f_*\CHom(\cF, f^!\cG) \ar[u, "\text{Grothendieck duality}"]\ar[d]& \CHom(f_*\cF, f_*f^!\cG)\ar[u, "(\text{counit}) \circ -"']\\
+            \CHom(f_*\cF, f_*(\CHom(\cF, f^!\cG)\otimes \cF)) \ar[ru, out=0, in=-90]& \quad,
         \end{tikzcd}
     \]
     and it commutes by the very definition of the isomorphism of Grothendieck duality (see Remark \ref{remark:grothendieck-duality-isomorphism}).
@@ -1242,7 +1248,7 @@ The latter morphism is completed into a commutative diagram
     \end{tikzcd}
 \]
 of injective morphisms by Proposition \ref{prpo:forget-base}.
-We also have a ``restriction'' morphism $\FM_T(X) \to \FM_k(X_0), P \mapsto j^*P$ by Proposition \ref{prop:restriction-to-fiber}.
+We also have a ``restriction'' morphism $\FM_T(X) \to \FM_k(X_0), \cP \mapsto j^* \cP$ by Proposition \ref{prop:restriction-to-fiber}.
 Summarizing the discussion, we have the following diagram of groups:
 \[
     \begin{tikzcd}
@@ -1260,39 +1266,39 @@ We regard $\FM_k(X_0) \subset \Auteq D^b(X_0)$ and $\FM_T(X) \subset \FM_k(X) \s
               The autoequivalence $L \otimes (-)$ of $D^b(X)$ is an element of $\FM_T(X)$ and its restriction to $D^b(X_0)$ is $L\vert_{X_0} \otimes (-)$.
     \end{enumerate}
 \end{example}
-Next, we pick an object $E \in D^b(X_0)$ such that $i_*E \in D^b(X)$ becomes a spherical object.
-The twist functor $T_{i_*E}$ is a Fourier--Mukai transform (i.e.~ belongs to $\FM_k(X)$) with kernel
+Next, we pick an object $\cE \in D^b(X_0)$ such that $i_*{\cE} \in D^b(X)$ becomes a spherical object.
+The twist functor $T_{i_*{\cE}}$ is a Fourier--Mukai transform (i.e.~ belongs to $\FM_k(X)$) with kernel
 \begin{equation}
-    P_E = \Cone((i_*E)^\vee \boxtimes (i_*E) \xrightarrow{\ev} \Delta_{k*}\cO_X).
+    \cP_{\cE} = \Cone((i_*{\cE})^\vee \boxtimes (i_*{\cE}) \xrightarrow{\ev} \Delta_{k*}\cO_X).
 \end{equation}
-We claim that $T_{i_*E}$ is included in a smaller group $\FM_T(X) \subset \FM_k(X)$ by constructing a relative integral kernel for $T_{i_*E}$.
+We claim that $T_{i_*{\cE}}$ is included in a smaller group $\FM_T(X) \subset \FM_k(X)$ by constructing a relative integral kernel for $T_{i_*{\cE}}$.
 \begin{lemma}
-    Let $E \in D^b(X_0)$ and $E' \coloneqq \CHom_{X_0}(E, i^!\cO_X)$.
+    Let $\cE \in D^b(X_0)$ and $\cE' = \CHom_{X_0}(\cE, i^!\cO_X)$.
     Then we have an isomorphism
     \begin{equation}
-        (i_*E)^\vee \boxtimes (i_*E) \xrightarrow{\sim} \iota_*j_*(E' \boxtimes E).
+        (i_*{\cE})^\vee \boxtimes (i_*{\cE}) \xrightarrow{\sim} \iota_*j_*(\cE' \boxtimes \cE).
     \end{equation}
 \end{lemma}
 \begin{proof}
     It follows from the Kunneth formula and Grothendieck duality.
 \end{proof}
 \begin{proposition}
-    Let $E \in D^b(X_0)$ and $E' \coloneqq \CHom_{X_0}(E, i^!\cO_X)$.
-    Let $\widetilde{\ev} \in \Hom(j_*(E' \boxtimes E), \Delta_{T*}\cO_X)$ be the composition morphism
+    Let $\cE \in D^b(X_0)$ and $\cE' = \CHom_{X_0}(\cE, i^!\cO_X)$.
+    Let $\widetilde{\ev} \in \Hom(j_*(\cE' \boxtimes \cE), \Delta_{T*}\cO_X)$ be the composition morphism
     \begin{equation}
-        \widetilde{\ev} \colon j_*(E' \boxtimes E) \to j_*\delta_*(E' \otimes E)\cong \Delta_{T*}i_*(E' \otimes E) \to \Delta_{T*}\cO_X,
+        \widetilde{\ev} \colon j_*(\cE' \boxtimes \cE) \to j_*\delta_*(\cE' \otimes \cE)\cong \Delta_{T*}i_*(\cE' \otimes \cE) \to \Delta_{T*}\cO_X,
     \end{equation}
     where
     \begin{enumerate}
-        \item $E' \boxtimes E \to \delta_*(E' \otimes E)$ is the adjoint to the natural isomorphism $\delta^*(E' \boxtimes E) \cong E' \otimes E$,
+        \item $\cE' \boxtimes \cE \to \delta_*(\cE' \otimes \cE)$ is the adjoint to the natural isomorphism $\delta^*(\cE' \boxtimes \cE) \cong \cE' \otimes \cE$,
         \item $j_*\delta_* \cong \Delta_{T*}i_*$ is the natural isomorphism, and
-        \item $i_*(E' \otimes E) \to \cO_X$ is the adjoint to the natural pairing $E' \otimes E \to i^!\cO_X$.
+        \item $i_*(\cE' \otimes \cE) \to \cO_X$ is the adjoint to the natural pairing $\cE' \otimes \cE \to i^!\cO_X$.
     \end{enumerate}
     Then we have a commutative diagram
     \begin{equation}
         \begin{tikzcd}\label{eq:commutative-diagram-for-evaluation-map}
-            (i_*E)^\vee \boxtimes (i_*E)\ar[r, "\ev"] \ar[d, "\sim", sloped] & \Delta_{k*}\cO_X \ar[d, "\sim", sloped]\\
-            \iota_*k_*(E' \boxtimes E) \ar[r, "\iota_*(\widetilde{\ev})"]& \iota_*\Delta_{T*}\cO_X
+            (i_*{\cE})^\vee \boxtimes (i_*{\cE})\ar[r, "\ev"] \ar[d, "\sim", sloped] & \Delta_{k*}\cO_X \ar[d, "\sim", sloped]\\
+            \iota_*k_*(\cE' \boxtimes \cE) \ar[r, "\iota_*(\widetilde{\ev})"]& \iota_*\Delta_{T*}\cO_X
         \end{tikzcd}
     \end{equation}
     in $D_{qc}(X \times X)$.
@@ -1301,73 +1307,73 @@ We claim that $T_{i_*E}$ is included in a smaller group $\FM_T(X) \subset \FM_k(
     The diagram in the statement can be decomposed into the following squares:
     \[
         \begin{tikzcd}
-            (i_*E)^\vee \boxtimes i_*E \ar[rr]\ar[d, "\sim", sloped] &  & \Delta_{k*}((i_*E)^\vee \otimes i_*E) \ar[rr]\ar[d, "\sim", sloped] &  & \Delta_{k*}(\cO_X) \ar[ddd, equal]\\
-            i_*(E')\boxtimes i_*E \ar[rr]\ar[dd]&  & \Delta_{k*}(i_*(E')\otimes i_*E) \ar[dd] &  & \\
+            (i_*{\cE})^\vee \boxtimes i_*{\cE} \ar[rr]\ar[d, "\sim", sloped] &  & \Delta_{k*}((i_*{\cE})^\vee \otimes i_*{\cE}) \ar[rr]\ar[d, "\sim", sloped] &  & \Delta_{k*}(\cO_X) \ar[ddd, equal]\\
+            i_*(\cE')\boxtimes i_*{\cE} \ar[rr]\ar[dd]&  & \Delta_{k*}(i_*(\cE')\otimes i_*{\cE}) \ar[dd] &  & \\
             & (A) &  & (B) & \\
-            \iota_*k_*(E' \boxtimes E) \ar[r] & \iota_*k_*\Delta_{Y*}(E' \otimes E) \ar[r, "\sim"]\ar[rd, out=-90, in=180, "\sim"] & \Delta_{k*}(i_*(E' \otimes E)) \ar[rr]\ar[d, "\sim", sloped] &  & \Delta_{k*}(\cO_X) \ar[d, "\sim", sloped] \\
-            &  & \iota_*\Delta_{T*}i_*(E' \otimes E) \ar[rr] &  & \iota_*\Delta_{T*}\cO_X
+            \iota_*k_*(\cE' \boxtimes \cE) \ar[r] & \iota_*k_*\Delta_{Y*}(\cE' \otimes \cE) \ar[r, "\sim"]\ar[rd, out=-90, in=180, "\sim"] & \Delta_{k*}(i_*(\cE' \otimes \cE)) \ar[rr]\ar[d, "\sim", sloped] &  & \Delta_{k*}(\cO_X) \ar[d, "\sim", sloped] \\
+            &  & \iota_*\Delta_{T*}i_*(\cE' \otimes \cE) \ar[rr] &  & \iota_*\Delta_{T*}\cO_X
         \end{tikzcd}
     \]
-    The square (A) is commutative by Proposition \ref{prop:Kunneth-and-cup-product} for $f = i$, $M = E'$, and $N = E$.
-    The commutativity of the square (B) follows from Proposition \ref{prop:relative-cup-product-and-Grothendieck-duality} for $f = i$, $M = E$, and $N = \cO_X$.
+    The square (A) is commutative by Proposition \ref{prop:Kunneth-and-cup-product} for $f = i$, $\cF = \cE'$, and $\cG = \cE$.
+    The commutativity of the square (B) follows from Proposition \ref{prop:relative-cup-product-and-Grothendieck-duality} for $f = i$, $\cF = \cE$, and $\cG = \cO_X$.
     The other parts of the diagram are commutative by the functoriality.
 \end{proof}
 
-The commutative diagram \eqref{eq:commutative-diagram-for-evaluation-map} provides a candidate for the relative integral kernel of the twist functor $T_{i_*E}$.
-Namely, the complex $P'_E \in D_{qc}(X \times_T X)$ defined by
+The commutative diagram \eqref{eq:commutative-diagram-for-evaluation-map} provides a candidate for the relative integral kernel of the twist functor $T_{i_*{\cE}}$.
+Namely, the complex $\cP'_{\cE} \in D_{qc}(X \times_T X)$ defined by
 \begin{equation}\label{eq:candidate-for-relative-integral-kernel}
-    P'_E = \Cone(k_*(E' \boxtimes E) \xrightarrow{\widetilde{\ev}} \Delta_{T*}\cO_X)
+    \cP'_{\cE} = \Cone(k_*(\cE' \boxtimes \cE) \xrightarrow{\widetilde{\ev}} \Delta_{T*}\cO_X)
 \end{equation}
-satisfies $\iota_*P'_E \cong P_E$ for the (absolute) integral kernel $P_E$ of the twist functor
+satisfies $\iota_* \cP'_{\cE} \cong \cP_{\cE}$ for the (absolute) integral kernel $\cP_{\cE}$ of the twist functor
 \begin{equation}
-    P_E = \Cone((i_*E)^\vee \boxtimes (i_*E) \to \Delta_{k*}\cO_X).
+    \cP_{\cE} = \Cone((i_*{\cE})^\vee \boxtimes (i_*{\cE}) \to \Delta_{k*}\cO_X).
 \end{equation}
-Therefore our remaining task is to check $P'_E \in \FM_T(X)$.
+Therefore our remaining task is to check $\cP'_{\cE} \in \FM_T(X)$.
 \begin{proposition}\label{prop:twist-functor-is-in-FM}
-    The complex $P'_E$ of \eqref{eq:candidate-for-relative-integral-kernel} is an element of $\FM_T(X)$.
-    The twist functor $T_{i_*E} \in \Auteq D^b(X)$ is an element of the subgroup $\FM_T(X)$ via identification
+    The complex $\cP'_{\cE}$ of \eqref{eq:candidate-for-relative-integral-kernel} is an element of $\FM_T(X)$.
+    The twist functor $T_{i_*{\cE}} \in \Auteq D^b(X)$ is an element of the subgroup $\FM_T(X)$ via identification
     \begin{equation}
-        \FM_T(X) \hookrightarrow \Auteq D^b(X), \quad P'_E \mapsto \Phi_{P'_E} = T_{i_*E}.
+        \FM_T(X) \hookrightarrow \Auteq D^b(X), \quad \cP'_{\cE} \mapsto \Phi_{\cP'_{\cE}} = T_{i_*{\cE}}.
     \end{equation}
 \end{proposition}
 \begin{proof}
-    By Theorem \ref{thm:adjoint-to-integral-functors} and Lemma \ref{lem:criterion-for-invertible-kernel}, it suffices to show that $P'_E$ is in $D^b(X \times_T X)$, $\pi_1$-perfect, and has proper support with respect to $\pi_1 \colon X \times_T X \to X$.
-    As these conditions have the two-out-of-three property it is enough to examine $k_*(E' \boxtimes E)$ and $\Delta_{T*}\cO_X$.
+    By Theorem \ref{thm:adjoint-to-integral-functors} and Lemma \ref{lem:criterion-for-invertible-kernel}, it suffices to show that $\cP'_{\cE}$ is in $D^b(X \times_T X)$, $\pi_1$-perfect, and has proper support with respect to $\pi_1 \colon X \times_T X \to X$.
+    As these conditions have the two-out-of-three property it is enough to examine $k_*(\cE' \boxtimes \cE)$ and $\Delta_{T*}\cO_X$.
 
     The coherent sheaf $\Delta_{T*}\cO_X$ is clearly in $D^b(X \times_T X)$ and has proper support over $X$.
     It is also $\pi_1$-perfect, since $\cO_X$ is perfect and $\Delta_{T}$ is proper (Proposition \ref{prop:proper-push-forward-of-f-perfect}).
 
-    The isomorphism $\iota_*(k_*(E' \boxtimes E)) \cong (i_*E)^\vee\boxtimes (i_*E)$ tells us that $k_*(E' \boxtimes E)$ is in $D^b(X \times_T X)$ and has proper support over $X$, since a closed immersion preserves cohomologies.
-    To show that $k_*(E' \boxtimes E)$ is $\pi_1$-perfect, we use Proposition \ref{prop:crirtion_for_relative_perfection}.
-    Let $F \in D^b(X)$.
+    The isomorphism $\iota_*(k_*(\cE' \boxtimes \cE)) \cong (i_*{\cE})^\vee\boxtimes (i_*{\cE})$ tells us that $k_*(\cE' \boxtimes \cE)$ is in $D^b(X \times_T X)$ and has proper support over $X$, since a closed immersion preserves cohomologies.
+    To show that $k_*(\cE' \boxtimes \cE)$ is $\pi_1$-perfect, we use Proposition \ref{prop:crirtion_for_relative_perfection}.
+    Let $\cF \in D^b(X)$.
     We have
     \begin{align}
-        \iota_*(k_*(E' \boxtimes E) \otimes \pi_1^*F) & \cong \iota_*k_*((E' \otimes i^*F) \boxtimes E) \\
-                                                      & \cong i_*(E' \otimes i^*F) \boxtimes i_*E       \\
-                                                      & \cong (i_*(E') \otimes F) \boxtimes i_*E        \\
-                                                      & \cong ((i_*E)^\vee \otimes F) \boxtimes i_*E
+        \iota_*(k_*(\cE' \boxtimes \cE) \otimes \pi_1^*\cF) & \cong \iota_*k_*((\cE' \otimes i^*\cF) \boxtimes \cE)  \\
+                                                            & \cong i_*(\cE' \otimes i^*\cF) \boxtimes i_*{\cE}      \\
+                                                            & \cong (i_*(\cE') \otimes \cF) \boxtimes i_*{\cE}       \\
+                                                            & \cong ((i_*{\cE})^\vee \otimes \cF) \boxtimes i_*{\cE}
     \end{align}
     in $D_{qc}(X \times_k X)$.
-    The last term is a bounded complex with coherent cohomologies and thus $k_*(E' \boxtimes E) \otimes \pi_1^*F \in D^b(X \times_T X)$.
-    By Proposition \ref{prop:crirtion_for_relative_perfection} we conclude that $k_*(E' \boxtimes E)$ is $\pi_1$-perfect.
+    The last term is a bounded complex with coherent cohomologies and thus $k_*(\cE' \boxtimes \cE) \otimes \pi_1^*\cF \in D^b(X \times_T X)$.
+    By Proposition \ref{prop:crirtion_for_relative_perfection} we conclude that $k_*(\cE' \boxtimes \cE)$ is $\pi_1$-perfect.
 \end{proof}
-Finally, we define the half-spherical twist $H_E \in \Auteq D^b(X_0)$ along $E$ to be the ``restriction to fiber'' of the twist $T_{i_*E}$.
+Finally, we define the half-spherical twist $H_{\cE} \in \Auteq D^b(X_0)$ along $E$ to be the ``restriction to fiber'' of the twist $T_{i_*{\cE}}$.
 \begin{definition}[half-spherical twist]\label{def:half-spherical-twist}
-    Let $E \in D^b(X_0)$ be an object such that $i_*E \in D^b(X)$ is a spherical object.
-    The \emph{half-spherical twist $H_E$} along $E$ is the autoequivalence of $D^b(X_0)$ defined by
+    Let $\cE \in D^b(X_0)$ be an object such that $i_*{\cE} \in D^b(X)$ is a spherical object.
+    The \emph{half-spherical twist $H_{\cE}$} along $\cE$ is the autoequivalence of $D^b(X_0)$ defined by
     \[
         \begin{tikzcd}
-            \FM_k(X_0) \ar[d, phantom, sloped, "\subset"] & \FM_T(X)\ar[l, "j^*"']\ar[d, phantom, sloped, "\subset"] & j^*P'_E \ar[d, mapsto]& P'_E \ar[l, mapsto] \ar[d, mapsto]\\
-            \Auteq D^b(X_0) & \Auteq D^b(X) & H_E & T_{i_*E},
+            \FM_k(X_0) \ar[d, phantom, sloped, "\subset"] & \FM_T(X)\ar[l, "j^*"']\ar[d, phantom, sloped, "\subset"] & j^*\cP'_{\cE} \ar[d, mapsto]& \cP'_{\cE} \ar[l, mapsto] \ar[d, mapsto]\\
+            \Auteq D^b(X_0) & \Auteq D^b(X) & H_{\cE} & T_{i_*{\cE}},
         \end{tikzcd}
     \]
     where the morphism $j^*$ is the one in Proposition \ref{prop:restriction-to-fiber}.
 \end{definition}
 \begin{corollary}\label{cor:compatibility-of-half-spherical-twists-and-spherical-twists}
-    The half-spherical twist $H_E$ and the spherical twist $T_{i_*E}$ fit into the commutative diagram
+    The half-spherical twist $H_{\cE}$ and the spherical twist $T_{i_*{\cE}}$ fit into the commutative diagram
     \begin{equation}
         \begin{tikzcd}
-            D^b(X_0) \ar[r, "i_*"] \ar[d, "H_E"'] & D^b(X) \ar[r, "i^*"]\ar[d, "T_{i_*E}"] & D^b(X_0) \ar[d,  "H_E"]\\
+            D^b(X_0) \ar[r, "i_*"] \ar[d, "H_{\cE}"'] & D^b(X) \ar[r, "i^*"]\ar[d, "T_{i_*{\cE}}"] & D^b(X_0) \ar[d,  "H_{\cE}"]\\
             D^b(X_0) \ar[r, "i_*"'] & D^b(X) \ar[r, "i^*"'] & D^b(X_0).
         \end{tikzcd}
     \end{equation}
@@ -1378,8 +1384,8 @@ Finally, we define the half-spherical twist $H_E \in \Auteq D^b(X_0)$ along $E$ 
 \end{proof}
 
 \begin{remark}
-    Since the autoequivalence $H_E$ depends not only on (the isomorphism class of) $E$ but also on the data $(X, T, \pi, i \colon X_0 \hookrightarrow X)$, the notation $H_E$ is not precise.
-    We will later provide an example where the same $E$ results in different half-spherical twists, depending on the embedding $i$.
+    Since the autoequivalence $H_{\cE}$ depends not only on (the isomorphism class of) $\cE$ but also on the data $(X, T, \pi, i \colon X_0 \hookrightarrow X)$, the notation $H_{\cE}$ is not precise.
+    We will later provide an example where the same $\cE$ results in different half-spherical twists, depending on the embedding $i$.
     However, we will use it for simplicity when there is no risk of confusion.
 \end{remark}
 
@@ -1399,8 +1405,8 @@ Finally, we define the half-spherical twist $H_E \in \Auteq D^b(X_0)$ along $E$ 
 
 \begin{example}
     Let $\pi \colon X \to C$ be a smooth family of varieties over a smooth curve $C$ and $i \colon X_0 \hookrightarrow X$ be a fiber.
-    Then a $\bP^n$-object $E \in D^b(X_0)$ in the sense of \cite{MR2200048} gives a spherical object $i_*E \in D^b(X)$, under suitable assumptions.
-    The half-spherical twist $H_E \in \Auteq{D^b(X_0)}$ is isomorphic to the associated $\bP^n$-twist $P_E$.
+    Then a $\bP^n$-object $\cE \in D^b(X_0)$ in the sense of \cite{MR2200048} gives a spherical object $i_*{\cE} \in D^b(X)$, under suitable assumptions.
+    The half-spherical twist $H_{\cE} \in \Auteq{D^b(X_0)}$ is isomorphic to the associated $\bP^n$-twist $P_{\cE}$.
 \end{example}
 
 
@@ -1418,33 +1424,33 @@ Finally, we define the half-spherical twist $H_E \in \Auteq D^b(X_0)$ along $E$ 
 
 We list some basic properties of half-spherical twists inherited from the ones of twist functors.
 \begin{proposition}\label{prop:empty-intersection}
-    Let $E, E_1, E_2 \in D^b(X_0)$ be objects such that $i_*E, i_*E_1, i_*E_2 \in D^b(X)$ are spherical.
+    Let $\cE, \cE' \in D^b(X_0)$ be objects such that $i_*{\cE}, i_*{\cE'} \in D^b(X)$ are spherical.
     \begin{enumerate}
-        \item For any $P \in \FM_T(X)$, we have\begin{equation}
-                  \Phi_{j^*P} \circ H_E \circ \Phi_{j^*P}^{-1} \cong H_{\Phi_{j^*P}(E)}.
+        \item For any $\cP \in \FM_T(X)$, we have\begin{equation}
+                  \Phi_{j^* \cP} \circ H_{\cE} \circ \Phi_{j^* \cP}^{-1} \cong H_{\Phi_{j^* \cP}(\cE)}.
               \end{equation}
-        \item If $\Supp E_1 \cap \Supp E_2 = \emptyset$, then $H_{E_1} \circ H_{E_2} \cong H_{E_2} \circ H_{E_1}$.
-        \item For $F \in D^b(X_0)$ such that $\Supp E \cap \Supp F = \emptyset$, then $H_E (F) \cong F$.
+        \item If $\Supp \cE \cap \Supp \cE = \emptyset$, then $H_{\cE} \circ H_{\cE'} \cong H_{\cE'} \circ H_{\cE}$.
+        \item For $\cF \in D^b(X_0)$ such that $\Supp \cE \cap \Supp \cF = \emptyset$, then $H_{\cE} (\cF) \cong \cF$.
     \end{enumerate}
 \end{proposition}
 \begin{proof}
     The first and second statements follow immediately from the corresponding properties of twist functors.
 
     For (3), we can not conclude the statement from Corollary \ref{cor:orthogonal-to-spherical}, since $i_* \colon D^b(X_0) \to D^b(X)$ is not conservative (i.e.~ isomorphism-reflecting) in general.
-    Let $F \in D^b(X_0)$ be an object such that $\Supp E \cap \Supp F = \emptyset$.
-    The half-spherical twist $H_E(F)$ is a Fourier--Mukai transform with kernel
+    Let $\cF \in D^b(X_0)$ be an object such that $\Supp \cE \cap \Supp \cF = \emptyset$.
+    The half-spherical twist $H_{\cE}(\cF)$ is a Fourier--Mukai transform with kernel
     \begin{equation}
-        j^*P'_E = \Cone(j^*k_*(E' \boxtimes E) \to j^*\Delta_{T*}\cO_X),
+        j^*\cP'_{\cE} = \Cone(j^*k_*(\cE' \boxtimes \cE) \to j^*\Delta_{T*}\cO_X),
     \end{equation}
     so we have
     \begin{align}
-        H_E(F) & \cong \Cone(\Phi_{j^*k_*(E' \boxtimes E)}(F) \to \Phi_{j^*\Delta_{T*}\cO_X}(F)) \\
-               & \cong \Cone(\Phi_{j^*k_*(E' \boxtimes E)}(F) \to F).
+        H_{\cE}(\cF) & \cong \Cone(\Phi_{j^*k_*(\cE' \boxtimes \cE)}(\cF) \to \Phi_{j^*\Delta_{T*}\cO_X}(\cF)) \\
+                     & \cong \Cone(\Phi_{j^*k_*(\cE' \boxtimes \cE)}(\cF) \to \cF).
     \end{align}
     Note that $\Phi_{j^*\Delta_{T*}\cO_X} \cong \id$ since $j^*$ is a group homomorphism (and preserves the unit element).
-    The complex $j^*k_*(E' \boxtimes E) \in D^b(X_0 \times X_0)$ is supported on $\Supp E \times \Supp E \subset X_0 \times X_0$.
-    This means $\Phi_{j^*k_*(E' \boxtimes E)}(F) = 0$.
-    Therefore we have $H_E(F) \cong F$.
+    The complex $j^*k_*(\cE' \boxtimes \cE) \in D^b(X_0 \times X_0)$ is supported on $\Supp \cE \times \Supp \cE \subset X_0 \times X_0$.
+    This means $\Phi_{j^*k_*(\cE' \boxtimes \cE)}(\cF) = 0$.
+    Therefore we have $H_{\cE}(\cF) \cong \cF$.
 \end{proof}
 
 
@@ -1589,9 +1595,9 @@ For more detailed formulations of such correspondence, we refer to \cite{2020arX
     Moreover, under this bijection, spherical objects correspond to non-separating simple loops with one-dimensional local systems.
 \end{theorem}
 \begin{theorem}[{\cite[Proposition 3.10, Theorem 7.22]{2020arXiv201108288O}}]\label{intersections_are_morphisms}
-    Let $E$ and $F$ be indecomposable objects of $D^b(F_n)$ which correspond to $(\gamma_E, V_E)$ and $(\gamma_F, V_F)$ by Theorem \ref{thm:bijection-between-objects-and-curves}, respectively.
-    Here $\gamma_E, \gamma_F$ are homotopy classes of curves on $T_n$ and $V_E, V_F$ are local systems on these curves.
-    Suppose that either $E$ or $F$ is perfect and $\dim V_E = \dim V_F = 1$. Then $\gamma_E$ and $\gamma_F$ have precisely $\sum_{i}\dim\Ext^i(E, F)$ intersections.
+    Let $\cF$ and $\cG$ be indecomposable objects of $D^b(F_n)$ which correspond to $(\gamma_{\cF}, V_{\cF})$ and $(\gamma_{\cG}, V_{\cG})$ by Theorem \ref{thm:bijection-between-objects-and-curves}, respectively.
+    Here $\gamma_{\cF}, \gamma_{\cG}$ are homotopy classes of curves on $T_n$ and $V_{\cF}, V_{\cG}$ are local systems on these curves.
+    Suppose that either $\cF$ or $\cG$ is perfect and $\dim V_{\cF} = \dim V_{\cG} = 1$. Then $\gamma_{\cF}$ and $\gamma_{\cG}$ have precisely $\sum_{i}\dim\Ext^i(\cF, \cG)$ intersections.
 \end{theorem}
 \begin{theorem}[{\cite[Theorem D]{2020arXiv201108288O}}]\label{thm:autoequivalence-of-I_n-curve}
     Assume $n \geq 2$.
@@ -1603,13 +1609,13 @@ For more detailed formulations of such correspondence, we refer to \cite{2020arX
 \end{theorem}
 \begin{theorem}[{\cite[Corollary 7.37]{2020arXiv201108288O}}]\label{thm:definition-of-upsilon}
     The morphism $\Upsilon$ in Theorem \ref{thm:autoequivalence-of-I_n-curve} respects the correspondence in Theorem \ref{thm:bijection-between-objects-and-curves} in the following sense:
-    For an element $\Phi \in \Auteq{D^b(F_n)}$, the mapping class $\Upsilon(\Phi)$ acts on the set of homotopy classes of curves on $T_n$ by $\gamma_E \mapsto \gamma_{\Phi(E)}$, where $\gamma_E$ is the curve on $T_n$ corresponding to an indecomposable object $E \in D^b(F_n)$.
+    For an element $\Phi \in \Auteq{D^b(F_n)}$, the mapping class $\Upsilon(\Phi)$ acts on the set of homotopy classes of curves on $T_n$ by $\gamma_{\cF} \mapsto \gamma_{\Phi(\cF)}$, where $\gamma_{\cF}$ is the curve on $T_n$ corresponding to an indecomposable object $\cF \in D^b(F_n)$.
 \end{theorem}
 \begin{theorem}[{\cite[Theorem 5.9]{2020arXiv201108288O}}]\label{thm:spherical-twist-and-dehn-twist}
-    Let $E \in D^b(F_n)$ be a spherical object and $(\gamma_E, V_E)$ be the corresponding loop and local system. Then the morphism $\Upsilon$ in Theorem \ref{thm:autoequivalence-of-I_n-curve} maps the twist functor $T_E$ to the Dehn twist $T_{\gamma_E}$ along $\gamma_E$.
+    Let $\cE \in D^b(F_n)$ be a spherical object and $(\gamma_{\cE}, V_{\cE})$ be the corresponding loop and local system. Then the morphism $\Upsilon$ in Theorem \ref{thm:autoequivalence-of-I_n-curve} maps the twist functor $T_{\cE}$ to the Dehn twist $T_{\gamma_{\cE}}$ along $\gamma_{\cE}$.
 \end{theorem}
 
-From now on, we denote the curve corresponding to an indecomposable object $E \in D^b(F_n)$ by $\gamma_E$.
+From now on, we denote the curve corresponding to an indecomposable object $E \in D^b(F_n)$ by $\gamma_{\cE}$.
 
 
 \begin{example}
@@ -2048,7 +2054,7 @@ Let $\res = \prod_{F \colon \text{reducible fiber}} \res_F$ be the product of th
     The condition $L \in \Ker(\Pic(S) \to \prod_{F \colon \text{reducible fiber}} \Pic(F))$ implies that $L_j \lvert_{G_{jk}} = 0$ for every $j$ and $k$.
     Consequently, the intersection number $L_j \cdot G_{jk}$ on $S$ must be zero.
 
-    Here we consider the $\bQ$-vector space $V_j$ generated by the irreducible components $\{G_{jk}\}_k$ of the $j$-th reducible fiber $F = F^{(j)}$ \footnote{We use this notation in order to avoid the confusion with type $I_n$ Kodaira fibers in the previous subsection.} in the ($\bQ$-coefficient) N\'{e}ron--Severi group $\NS(S) \otimes \bQ$, together with the intersection form.
+    Here we consider the $\bQ$-vector space $V_j$ generated by the irreducible components $\{G_{jk}\}_k$ of the $j$-th reducible fiber $F = F^{(j)}$ in the ($\bQ$-coefficient) N\'{e}ron--Severi group $\NS(S) \otimes \bQ$, together with the intersection form.
     It is well known that the set $\{G_{jk}\}$ gives a basis for $V_j$ and the intersection form on $V_j$ has exactly one-dimensional kernel, which is spanned by the class of $F^{(j)}$ (see \cite{MR1078016}, for example).
     The conditions $L_j \cdot G_{jk} = 0$ and $L_j \in \Gamma_j$ give the equations $L_j \cdot L_j = 0$ of intersection numbers.
     These observations imply that $L_j$ is a multiple of $F^{(j)}$ in $\NS(S) \otimes \bQ$.
