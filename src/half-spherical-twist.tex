@@ -39,6 +39,7 @@
 
 \DeclareFieldFormat{pages}{#1}
 \renewbibmacro{in:}{}
+\renewcommand{\multicitedelim}{\addcomma\space}
 
 \DeclareFieldFormat[article]{number}{\bibstring{number}~#1}
 \renewbibmacro*{journal+issuetitle}{%
@@ -61,7 +62,7 @@
 	\newunit
 }
 
-\DeclareFieldFormat[article]{title}{#1}
+\DeclareFieldFormat[article, inproceedings]{title}{#1}
 
 %% packages
 \usepackage[svgnames]{xcolor}
