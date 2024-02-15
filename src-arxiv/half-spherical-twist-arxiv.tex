@@ -18,6 +18,7 @@
     eprint=true
 }
 
+\addbibresource{../bib/half-spherical-twist.bib}
 
 \DeclareSourcemap{
   \maps[datatype=bibtex]{
@@ -442,6 +443,7 @@ The following base change theorem generalizes flat base change theorem.
                       Y \times_k X \arrow[r]&  X \times_k X
                   \end{tikzcd}
               \]
+
         \item Let $S' \to S$ be a morphism of schemes. Let $X$ and $Y$ be $S$-schemes that are flat over $S$ and $Y \to X$ be a morphism of $S$-schemes. Then $Y$ and $X \times_S S'$ are tor-independent over $X$.
               \[
                   \begin{tikzcd}
@@ -1154,7 +1156,7 @@ As an immediate consequence of this triangle, we have the following.
     If $\cE \in \Perf(Y)$ is an \emph{exceptional object} (i.e.~ $\Ext^*_X(\cE, \cE) \cong k$), then $\iota_* \cE \in D^b(X)$ is a spherical object.
 \end{proposition}
 \begin{example}\label{ex:spherical-object-from-K3-degeneration}
-    Let $\pi \colon X \to C$ be a type \rom{3} degeneration of K3 surfaces (over $\bC$) \cite{Kulikov1977,Persson--Pinkham1981}.
+    Let $\pi \colon X \to C$ be a type \rom{3} degeneration of K3 surfaces \cite{Kulikov1977,Persson--Pinkham1981} (over $\bC$).
     It has the following properties by definition.
     \begin{enumerate}
         \item The canonical bundle $\omega_X$ of the total space $X$ is trivial.
@@ -1164,15 +1166,6 @@ As an immediate consequence of this triangle, we have the following.
     Then the structure sheaf $\cO_{V_i}$ of $V_i$ is an exceptional object in $\Perf(V_i)$, since the hodge numbers $h^{0,1}$ and $h^{0,2}$ of a smooth rational surface are zero.
     By the property (1) and Proposition \ref{prop:exceptional-to-spherical}, the structure sheaf $\cO_{V_i}$ is a spherical object in $D^b(X)$.
     The same argument applies to arbitrary line bundles (or exceptional objects) on $V_i$.
-
-
-    % A concrete example of such situations is constructed as follows.
-    % Let $S = \{F(x, y, z, w) = 0\} \subset \bP^3$ be a K3 surface defined by a homogeneous quartic polynomial $F$, and $T = \{xyzw = 0\} \subset \bP^3$ be a union of four planes.
-    % For a generic choice of $F$, the pencil $\overline{X} = \{xyzw + t F(x, y, z, w) = 0\} \subset \bP^3 \times \bC$ spanned by $S$ and $T$
-    % has exactly $24$ singular points on the central fiber $\overline{X_0} = T$.
-    % They are the intersections of $\{F = 0\}$ and the edges of the tetrahedron $T$, and all of them are ordinary double points.
-    % We can take a suitable small resolution $X \to \overline{X}$ of these singularities to obtain a type \rom{3} degeneration of K3 surfaces $\pi \colon X \to \overline{X} \to \bC$.
-    % In this case the central fiber $X_0$ has four components, each of which is a blow-up of $\bP^2$ at six points.
 \end{example}
 The following basic properties of twist functors will be useful for us.
 \begin{lemma}
@@ -1436,7 +1429,6 @@ Finally, we define the half-spherical twist $H_{\cE} \in \Auteq D^b(X_0)$ along 
 
 \begin{remark}
     Since the autoequivalence $H_{\cE}$ depends not only on (the isomorphism class of) $\cE$ but also on the data $(X, T, \pi, i \colon X_0 \hookrightarrow X)$, the notation $H_{\cE}$ is not precise.
-    % We will later provide an example where the same $\cE$ results in different half-spherical twists, depending on the embedding $i$.
     However, we will use it for simplicity when there is no risk of confusion.
 \end{remark}
 
@@ -2128,8 +2120,8 @@ Let $\res = \prod_{F \colon \text{reducible fiber}} \res_F$ be the product of th
               \begin{equation}
                   1 \to \langle (-)\otimes \cO_S(F^{(j)}) \mid 1 \leq j \leq r \rangle \to B \xrightarrow{\psi} \prod_{j = 1}^r \MCG(T_{n_j}).
               \end{equation}
-        \item Let $p_j \colon \prod_{j=1}^r \MCG(T_{n_j}) \to \MCG(T_{n_j})$ be the projection onto the $j$-th component. Then the image $\Image(\psi)$ is the product of its projections to the components $\Image(\psi) = \prod_{j = 1}^r \Image(p_j \circ \psi)$.
-        \item The half twists along the curves $\gamma_{\cO_{G_1}(-1)}, \dots, \gamma_{\cO_{G_{n_j}}(-1)}, \gamma_{\cO_{G_1}}, \dots, \gamma_{\cO_{G_{n_j}}}$ on $T_{n_j}$ give a set of generators for $\Image(p_j \circ \psi) \subset \MCG(T_{n_j})$ (see Figure \ref{fig:generators-for-image-of-B}).
+        \item Let $p_j \colon \prod_{j=1}^r \MCG(T_{n_j}) \to \MCG(T_{n_j})$ be the projection onto the $j$-th component. Then the image $\Image(\psi)$ is the product of its projections onto the individual components $\Image(\psi) = \prod_{j = 1}^r \Image(p_j \circ \psi)$.
+        \item The set of half twists along the curves $\gamma_{\cO_{G_1}(-1)}, \dots, \gamma_{\cO_{G_{n_j}}(-1)}, \gamma_{\cO_{G_1}}, \dots, \gamma_{\cO_{G_{n_j}}}$ on $T_{n_j}$ generates the subgroup $\Image(p_j \circ \psi) \subset \MCG(T_{n_j})$ (see Figure \ref{fig:generators-for-image-of-B}).
         \item If $\kappa(S) \neq 0$, then the group $B$ coincides with the group
               \begin{equation}
                   \langle T_{\cO_G(a)} \mid G \subset S \text{ is a $(-2)$ curve, } a \in \bZ\rangle,
@@ -2247,8 +2239,6 @@ Let $\res = \prod_{F \colon \text{reducible fiber}} \res_F$ be the product of th
     Every element $(-) \otimes L \in \Image(B \to \Auteq D^b(F)) \cap \Pic F$ comes from a line bundle in $\langle \cO_S(G_k) \mid k = 1, \dots, n\rangle \in \Pic S$ by a similar argument to the proof of Theorem \ref{prop:kernel-of-res}.
     Then the sum of all components of the multi-degree vector of $L$ must be zero, and thus $L \ncong \cO_{F}(x_1)$.
 \end{remark}
-
-
 
 \begin{remark}
     Let
