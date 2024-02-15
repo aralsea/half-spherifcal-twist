@@ -1,0 +1,1337 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{MR4604981}{article}{}
+      \name{author}{3}{}{%
+        {{hash=14e2abb498e4c194ef1fef89bbd41e91}{%
+           family={Alonso\bibnamedelima Tarr\'{\i}o},
+           familyi={A\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Leovigildo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=abeb10a04319309d2e7de94113bc43d9}{%
+           family={Jerem\'{\i}as\bibnamedelima L\'{o}pez},
+           familyi={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Ana},
+           giveni={A\bibinitperiod}}}%
+        {{hash=355f4fe79e15a74667672e255f26f07e}{%
+           family={Sancho\bibnamedelimb de\bibnamedelima Salas},
+           familyi={S\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a057136536d9d77f4ba682161970cb4}
+      \strng{fullhash}{4a057136536d9d77f4ba682161970cb4}
+      \strng{bibnamehash}{4a057136536d9d77f4ba682161970cb4}
+      \strng{authorbibnamehash}{4a057136536d9d77f4ba682161970cb4}
+      \strng{authornamehash}{4a057136536d9d77f4ba682161970cb4}
+      \strng{authorfullhash}{4a057136536d9d77f4ba682161970cb4}
+      \field{labelalpha}{AJS23}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0025-5874,1432-1823}
+      \field{journaltitle}{Math. Z.}
+      \field{number}{3}
+      \field{title}{Relative perfect complexes}
+      \field{volume}{304}
+      \field{year}{2023}
+      \field{pages}{Paper No. 42\bibrangessep 25}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1007/s00209-023-03294-7
+      \endverb
+    \endentry
+    \entry{MR3692883}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ad6390f978474c3f2c62981a75f07cbc}{%
+           family={Anno},
+           familyi={A\bibinitperiod},
+           given={Rina},
+           giveni={R\bibinitperiod}}}%
+        {{hash=8a27c0edc26b83a6b3eaa1a40fdaddfa}{%
+           family={Logvinenko},
+           familyi={L\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{fc4de0c9356a08006ecf0575e886247a}
+      \strng{fullhash}{fc4de0c9356a08006ecf0575e886247a}
+      \strng{bibnamehash}{fc4de0c9356a08006ecf0575e886247a}
+      \strng{authorbibnamehash}{fc4de0c9356a08006ecf0575e886247a}
+      \strng{authornamehash}{fc4de0c9356a08006ecf0575e886247a}
+      \strng{authorfullhash}{fc4de0c9356a08006ecf0575e886247a}
+      \field{labelalpha}{AL17}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1435-9855}
+      \field{journaltitle}{J. Eur. Math. Soc. (JEMS)}
+      \field{number}{9}
+      \field{title}{Spherical {DG}-functors}
+      \field{volume}{19}
+      \field{year}{2017}
+      \field{pages}{2577\bibrangedash 2656}
+      \range{pages}{80}
+      \verb{doi}
+      \verb 10.4171/JEMS/724
+      \endverb
+    \endentry
+    \entry{MR2593258}{article}{}
+      \name{author}{2}{}{%
+        {{hash=cc8331a890ef8d4125186a92d573f28d}{%
+           family={Baranovsky},
+           familyi={B\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod}}}%
+        {{hash=256c7fb5f9c914887ae16d44adae8aff}{%
+           family={Pecharich},
+           familyi={P\bibinitperiod},
+           given={Jeremy},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{3b75a90e567faa698d9deb1e1b4d1fdc}
+      \strng{fullhash}{3b75a90e567faa698d9deb1e1b4d1fdc}
+      \strng{bibnamehash}{3b75a90e567faa698d9deb1e1b4d1fdc}
+      \strng{authorbibnamehash}{3b75a90e567faa698d9deb1e1b4d1fdc}
+      \strng{authornamehash}{3b75a90e567faa698d9deb1e1b4d1fdc}
+      \strng{authorfullhash}{3b75a90e567faa698d9deb1e1b4d1fdc}
+      \field{labelalpha}{BP10}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1895-1074}
+      \field{journaltitle}{Cent. Eur. J. Math.}
+      \field{number}{1}
+      \field{title}{On equivalences of derived and singular categories}
+      \field{volume}{8}
+      \field{year}{2010}
+      \field{pages}{1\bibrangedash 14}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.2478/s11533-009-0063-y
+      \endverb
+    \endentry
+    \entry{MR3592689}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0432ee943f938a79a75d4aae75ea9d00}{%
+           family={Bayer},
+           familyi={B\bibinitperiod},
+           given={Arend},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6ba75807a1e850f48d587aa1a6ed2dac}{%
+           family={Bridgeland},
+           familyi={B\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b7be427a34b6b9b1c3c26030e685bcf}
+      \strng{fullhash}{8b7be427a34b6b9b1c3c26030e685bcf}
+      \strng{bibnamehash}{8b7be427a34b6b9b1c3c26030e685bcf}
+      \strng{authorbibnamehash}{8b7be427a34b6b9b1c3c26030e685bcf}
+      \strng{authornamehash}{8b7be427a34b6b9b1c3c26030e685bcf}
+      \strng{authorfullhash}{8b7be427a34b6b9b1c3c26030e685bcf}
+      \field{labelalpha}{BB17}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0012-7094}
+      \field{journaltitle}{Duke Math. J.}
+      \field{number}{1}
+      \field{title}{Derived automorphism groups of {K}3 surfaces of {P}icard rank 1}
+      \field{volume}{166}
+      \field{year}{2017}
+      \field{pages}{75\bibrangedash 124}
+      \range{pages}{50}
+      \verb{doi}
+      \verb 10.1215/00127094-3674332
+      \endverb
+    \endentry
+    \entry{MR1818984}{article}{}
+      \name{author}{2}{}{%
+        {{hash=66fdb3c8685523b3db665d07520727d8}{%
+           family={Bondal},
+           familyi={B\bibinitperiod},
+           given={Alexei},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c83ff4acbad10906d10aa4a8053867d7}{%
+           family={Orlov},
+           familyi={O\bibinitperiod},
+           given={Dmitri},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{573cfd33a483996f2af196d9df7c5873}
+      \strng{fullhash}{573cfd33a483996f2af196d9df7c5873}
+      \strng{bibnamehash}{573cfd33a483996f2af196d9df7c5873}
+      \strng{authorbibnamehash}{573cfd33a483996f2af196d9df7c5873}
+      \strng{authornamehash}{573cfd33a483996f2af196d9df7c5873}
+      \strng{authorfullhash}{573cfd33a483996f2af196d9df7c5873}
+      \field{labelalpha}{BO01}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0010-437X}
+      \field{journaltitle}{Compositio Math.}
+      \field{number}{3}
+      \field{title}{Reconstruction of a variety from the derived category and groups of autoequivalences}
+      \field{volume}{125}
+      \field{year}{2001}
+      \field{pages}{327\bibrangedash 344}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1023/A:1002470302976
+      \endverb
+    \endentry
+    \entry{MR1651025}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6ba75807a1e850f48d587aa1a6ed2dac}{%
+           family={Bridgeland},
+           familyi={B\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ba75807a1e850f48d587aa1a6ed2dac}
+      \strng{fullhash}{6ba75807a1e850f48d587aa1a6ed2dac}
+      \strng{bibnamehash}{6ba75807a1e850f48d587aa1a6ed2dac}
+      \strng{authorbibnamehash}{6ba75807a1e850f48d587aa1a6ed2dac}
+      \strng{authornamehash}{6ba75807a1e850f48d587aa1a6ed2dac}
+      \strng{authorfullhash}{6ba75807a1e850f48d587aa1a6ed2dac}
+      \field{extraname}{1}
+      \field{labelalpha}{Bri99}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0024-6093}
+      \field{journaltitle}{Bull. London Math. Soc.}
+      \field{number}{1}
+      \field{title}{Equivalences of triangulated categories and {F}ourier-{M}ukai transforms}
+      \field{volume}{31}
+      \field{year}{1999}
+      \field{pages}{25\bibrangedash 34}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1112/S0024609398004998
+      \endverb
+    \endentry
+    \entry{Bridgeland2002FourierMukaiTF}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=6ba75807a1e850f48d587aa1a6ed2dac}{%
+           family={Bridgeland},
+           familyi={B\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ba75807a1e850f48d587aa1a6ed2dac}
+      \strng{fullhash}{6ba75807a1e850f48d587aa1a6ed2dac}
+      \strng{bibnamehash}{6ba75807a1e850f48d587aa1a6ed2dac}
+      \strng{authorbibnamehash}{6ba75807a1e850f48d587aa1a6ed2dac}
+      \strng{authornamehash}{6ba75807a1e850f48d587aa1a6ed2dac}
+      \strng{authorfullhash}{6ba75807a1e850f48d587aa1a6ed2dac}
+      \field{extraname}{2}
+      \field{labelalpha}{Bri02}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fourier-Mukai transforms for surfaces and moduli spaces of stable sheaves}
+      \field{year}{2002}
+    \endentry
+    \entry{MR3713877}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6ba75807a1e850f48d587aa1a6ed2dac}{%
+           family={Bridgeland},
+           familyi={B\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=e1b7fd613b22c39f58ad42be69f3481a}{%
+           family={Maciocia},
+           familyi={M\bibinitperiod},
+           given={Antony},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{475d49a3ec31518daac8e7e5af28eb57}
+      \strng{fullhash}{475d49a3ec31518daac8e7e5af28eb57}
+      \strng{bibnamehash}{475d49a3ec31518daac8e7e5af28eb57}
+      \strng{authorbibnamehash}{475d49a3ec31518daac8e7e5af28eb57}
+      \strng{authornamehash}{475d49a3ec31518daac8e7e5af28eb57}
+      \strng{authorfullhash}{475d49a3ec31518daac8e7e5af28eb57}
+      \field{labelalpha}{BM17}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0393-0440}
+      \field{journaltitle}{J. Geom. Phys.}
+      \field{title}{Fourier-{M}ukai transforms for quotient varieties}
+      \field{volume}{122}
+      \field{year}{2017}
+      \field{pages}{119\bibrangedash 127}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1016/j.geomphys.2017.07.007
+      \endverb
+    \endentry
+    \entry{MR3162236}{article}{}
+      \name{author}{2}{}{%
+        {{hash=dddd232ca34187282618d9dedbc137fa}{%
+           family={Broomhead},
+           familyi={B\bibinitperiod},
+           given={Nathan},
+           giveni={N\bibinitperiod}}}%
+        {{hash=1e9f0e29ec7d4d9fdcae0a1f2d03f3eb}{%
+           family={Ploog},
+           familyi={P\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{7e888c1ccf3b6bf7a991216a91aee8a2}
+      \strng{fullhash}{7e888c1ccf3b6bf7a991216a91aee8a2}
+      \strng{bibnamehash}{7e888c1ccf3b6bf7a991216a91aee8a2}
+      \strng{authorbibnamehash}{7e888c1ccf3b6bf7a991216a91aee8a2}
+      \strng{authornamehash}{7e888c1ccf3b6bf7a991216a91aee8a2}
+      \strng{authorfullhash}{7e888c1ccf3b6bf7a991216a91aee8a2}
+      \field{labelalpha}{BP14}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0002-9939}
+      \field{journaltitle}{Proc. Amer. Math. Soc.}
+      \field{number}{4}
+      \field{title}{Autoequivalences of toric surfaces}
+      \field{volume}{142}
+      \field{year}{2014}
+      \field{pages}{1133\bibrangedash 1146}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1090/S0002-9939-2014-11530-9
+      \endverb
+    \endentry
+    \entry{MR2155085}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9acd6fbf130cc614d51455929a2cf98f}{%
+           family={Burban},
+           familyi={B\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod}}}%
+        {{hash=018427b55f7a574631e1d9d715e14fd1}{%
+           family={Kreu{\ss{}}ler},
+           familyi={K\bibinitperiod},
+           given={Bernd},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{48c1fa4565dd938d8c39965e1fe1a16a}
+      \strng{fullhash}{48c1fa4565dd938d8c39965e1fe1a16a}
+      \strng{bibnamehash}{48c1fa4565dd938d8c39965e1fe1a16a}
+      \strng{authorbibnamehash}{48c1fa4565dd938d8c39965e1fe1a16a}
+      \strng{authornamehash}{48c1fa4565dd938d8c39965e1fe1a16a}
+      \strng{authorfullhash}{48c1fa4565dd938d8c39965e1fe1a16a}
+      \field{extraname}{1}
+      \field{labelalpha}{BK05}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0075-4102}
+      \field{journaltitle}{J. Reine Angew. Math.}
+      \field{title}{Fourier-{M}ukai transforms and semi-stable sheaves on nodal {W}eierstra{\ss{}} cubics}
+      \field{volume}{584}
+      \field{year}{2005}
+      \field{pages}{45\bibrangedash 82}
+      \range{pages}{38}
+      \verb{doi}
+      \verb 10.1515/crll.2005.2005.584.45
+      \endverb
+    \endentry
+    \entry{MR2264663}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9acd6fbf130cc614d51455929a2cf98f}{%
+           family={Burban},
+           familyi={B\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod}}}%
+        {{hash=018427b55f7a574631e1d9d715e14fd1}{%
+           family={Kreu{\ss{}}ler},
+           familyi={K\bibinitperiod},
+           given={Bernd},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{48c1fa4565dd938d8c39965e1fe1a16a}
+      \strng{fullhash}{48c1fa4565dd938d8c39965e1fe1a16a}
+      \strng{bibnamehash}{48c1fa4565dd938d8c39965e1fe1a16a}
+      \strng{authorbibnamehash}{48c1fa4565dd938d8c39965e1fe1a16a}
+      \strng{authornamehash}{48c1fa4565dd938d8c39965e1fe1a16a}
+      \strng{authorfullhash}{48c1fa4565dd938d8c39965e1fe1a16a}
+      \field{extraname}{2}
+      \field{labelalpha}{BK06}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0010-437X}
+      \field{journaltitle}{Compos. Math.}
+      \field{number}{5}
+      \field{title}{Derived categories of irreducible projective curves of arithmetic genus one}
+      \field{volume}{142}
+      \field{year}{2006}
+      \field{pages}{1231\bibrangedash 1262}
+      \range{pages}{32}
+      \verb{doi}
+      \verb 10.1112/S0010437X06002090
+      \endverb
+    \endentry
+    \entry{MR3861804}{article}{}
+      \name{author}{2}{}{%
+        {{hash=57873c8658b3e161a7ec3d7253b36892}{%
+           family={Canonaco},
+           familyi={C\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7f0740dbbadc4e267890b2b67aef8e41}{%
+           family={Stellari},
+           familyi={S\bibinitperiod},
+           given={Paolo},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{9332f323e14692c349180dca8c0f936d}
+      \strng{fullhash}{9332f323e14692c349180dca8c0f936d}
+      \strng{bibnamehash}{9332f323e14692c349180dca8c0f936d}
+      \strng{authorbibnamehash}{9332f323e14692c349180dca8c0f936d}
+      \strng{authornamehash}{9332f323e14692c349180dca8c0f936d}
+      \strng{authorfullhash}{9332f323e14692c349180dca8c0f936d}
+      \field{labelalpha}{CS18}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1435-9855,1435-9863}
+      \field{journaltitle}{J. Eur. Math. Soc. (JEMS)}
+      \field{number}{11}
+      \field{title}{Uniqueness of dg enhancements for the derived category of a {G}rothendieck category}
+      \field{volume}{20}
+      \field{year}{2018}
+      \field{pages}{2607\bibrangedash 2641}
+      \range{pages}{35}
+      \verb{doi}
+      \verb 10.4171/JEMS/820
+      \endverb
+    \endentry
+    \entry{MR2850125}{book}{}
+      \name{author}{2}{}{%
+        {{hash=5b0089d70abcfe34be37d817a1622b42}{%
+           family={Farb},
+           familyi={F\bibinitperiod},
+           given={Benson},
+           giveni={B\bibinitperiod}}}%
+        {{hash=53e4c55b9dbbda75397b53fe89cf3971}{%
+           family={Margalit},
+           familyi={M\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press, Princeton, NJ}%
+      }
+      \strng{namehash}{fa223b7b743f1696aef9386d4064faa0}
+      \strng{fullhash}{fa223b7b743f1696aef9386d4064faa0}
+      \strng{bibnamehash}{fa223b7b743f1696aef9386d4064faa0}
+      \strng{authorbibnamehash}{fa223b7b743f1696aef9386d4064faa0}
+      \strng{authornamehash}{fa223b7b743f1696aef9386d4064faa0}
+      \strng{authorfullhash}{fa223b7b743f1696aef9386d4064faa0}
+      \field{labelalpha}{FM12}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-691-14794-9}
+      \field{series}{Princeton Mathematical Series}
+      \field{title}{A primer on mapping class groups}
+      \field{volume}{49}
+      \field{year}{2012}
+      \field{pages}{xiv+472}
+      \range{pages}{-1}
+    \endentry
+    \entry{MR3556457}{article}{}
+      \name{author}{1}{}{%
+        {{hash=20473d7dbb06a25688c52e69afaa4a3a}{%
+           family={Genovese},
+           familyi={G\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{20473d7dbb06a25688c52e69afaa4a3a}
+      \strng{fullhash}{20473d7dbb06a25688c52e69afaa4a3a}
+      \strng{bibnamehash}{20473d7dbb06a25688c52e69afaa4a3a}
+      \strng{authorbibnamehash}{20473d7dbb06a25688c52e69afaa4a3a}
+      \strng{authornamehash}{20473d7dbb06a25688c52e69afaa4a3a}
+      \strng{authorfullhash}{20473d7dbb06a25688c52e69afaa4a3a}
+      \field{labelalpha}{Gen16}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0024-6107,1469-7750}
+      \field{journaltitle}{J. Lond. Math. Soc. (2)}
+      \field{number}{2}
+      \field{title}{The uniqueness problem of dg-lifts and {F}ourier-{M}ukai kernels}
+      \field{volume}{94}
+      \field{year}{2016}
+      \field{pages}{617\bibrangedash 638}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1112/jlms/jdw052
+      \endverb
+    \endentry
+    \entry{MR3735868}{article}{}
+      \name{author}{3}{}{%
+        {{hash=a4252a136327eaf110934b543c9ff7d6}{%
+           family={Haiden},
+           familyi={H\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=e574fa57e6e7e5011f0d4b4996bfc187}{%
+           family={Katzarkov},
+           familyi={K\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=e8b6d46062ae9dedaced53b282276a8a}{%
+           family={Kontsevich},
+           familyi={K\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{db52560017aec5a83ef3bddbf4836b38}
+      \strng{fullhash}{db52560017aec5a83ef3bddbf4836b38}
+      \strng{bibnamehash}{db52560017aec5a83ef3bddbf4836b38}
+      \strng{authorbibnamehash}{db52560017aec5a83ef3bddbf4836b38}
+      \strng{authornamehash}{db52560017aec5a83ef3bddbf4836b38}
+      \strng{authorfullhash}{db52560017aec5a83ef3bddbf4836b38}
+      \field{labelalpha}{HKK17}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0073-8301}
+      \field{journaltitle}{Publ. Math. Inst. Hautes \'{E}tudes Sci.}
+      \field{title}{Flat surfaces and stability structures}
+      \field{volume}{126}
+      \field{year}{2017}
+      \field{pages}{247\bibrangedash 318}
+      \range{pages}{72}
+      \verb{doi}
+      \verb 10.1007/s10240-017-0095-y
+      \endverb
+    \endentry
+    \entry{MR0463157}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ee65baaab88f9233fbad3d51c399ee25}{%
+           family={Hartshorne},
+           familyi={H\bibinitperiod},
+           given={Robin},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag, New York-Heidelberg}%
+      }
+      \strng{namehash}{ee65baaab88f9233fbad3d51c399ee25}
+      \strng{fullhash}{ee65baaab88f9233fbad3d51c399ee25}
+      \strng{bibnamehash}{ee65baaab88f9233fbad3d51c399ee25}
+      \strng{authorbibnamehash}{ee65baaab88f9233fbad3d51c399ee25}
+      \strng{authornamehash}{ee65baaab88f9233fbad3d51c399ee25}
+      \strng{authorfullhash}{ee65baaab88f9233fbad3d51c399ee25}
+      \field{labelalpha}{Har77}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-387-90244-9}
+      \field{series}{Graduate Texts in Mathematics, No. 52}
+      \field{title}{Algebraic geometry}
+      \field{year}{1977}
+      \field{pages}{xvi+496}
+      \range{pages}{-1}
+    \endentry
+    \entry{MR2505443}{article}{}
+      \name{author}{3}{}{%
+        {{hash=dae24fd86aa82da589c64a5adf4cc109}{%
+           family={Hern\'{a}ndez\bibnamedelima Ruip\'{e}rez},
+           familyi={H\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=58017e4829debede356ceb8438909cb0}{%
+           family={L\'{o}pez\bibnamedelima Mart\'{\i}n},
+           familyi={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Ana\bibnamedelima Cristina},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=355f4fe79e15a74667672e255f26f07e}{%
+           family={Sancho\bibnamedelimb de\bibnamedelima Salas},
+           familyi={S\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{68f66b6c1a3cb057f061dc4a6ba67d56}
+      \strng{fullhash}{68f66b6c1a3cb057f061dc4a6ba67d56}
+      \strng{bibnamehash}{68f66b6c1a3cb057f061dc4a6ba67d56}
+      \strng{authorbibnamehash}{68f66b6c1a3cb057f061dc4a6ba67d56}
+      \strng{authornamehash}{68f66b6c1a3cb057f061dc4a6ba67d56}
+      \strng{authorfullhash}{68f66b6c1a3cb057f061dc4a6ba67d56}
+      \field{labelalpha}{HLS09}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1435-9855}
+      \field{journaltitle}{J. Eur. Math. Soc. (JEMS)}
+      \field{number}{3}
+      \field{title}{Relative integral functors for singular fibrations and singular partners}
+      \field{volume}{11}
+      \field{year}{2009}
+      \field{pages}{597\bibrangedash 625}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.4171/JEMS/162
+      \endverb
+    \endentry
+    \entry{MR2126495}{article}{}
+      \name{author}{1}{}{%
+        {{hash=61e09b4c2bdd30aabecc0b2203a44279}{%
+           family={Horja},
+           familyi={H\bibinitperiod},
+           given={R.\bibnamedelimi Paul},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{61e09b4c2bdd30aabecc0b2203a44279}
+      \strng{fullhash}{61e09b4c2bdd30aabecc0b2203a44279}
+      \strng{bibnamehash}{61e09b4c2bdd30aabecc0b2203a44279}
+      \strng{authorbibnamehash}{61e09b4c2bdd30aabecc0b2203a44279}
+      \strng{authornamehash}{61e09b4c2bdd30aabecc0b2203a44279}
+      \strng{authorfullhash}{61e09b4c2bdd30aabecc0b2203a44279}
+      \field{labelalpha}{Hor05}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0012-7094}
+      \field{journaltitle}{Duke Math. J.}
+      \field{number}{1}
+      \field{title}{Derived category automorphisms from mirror symmetry}
+      \field{volume}{127}
+      \field{year}{2005}
+      \field{pages}{1\bibrangedash 34}
+      \range{pages}{34}
+      \verb{doi}
+      \verb 10.1215/S0012-7094-04-12711-3
+      \endverb
+    \endentry
+    \entry{MR2553878}{article}{}
+      \name{author}{3}{}{%
+        {{hash=62ef5d71962e55d1e2757e1aeb5755c8}{%
+           family={Huybrechts},
+           familyi={H\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a2ad7cab51b78198328f866f02d5f4a2}{%
+           family={Macr\`{\i{}}},
+           familyi={M\bibinitperiod},
+           given={Emanuele},
+           giveni={E\bibinitperiod}}}%
+        {{hash=7f0740dbbadc4e267890b2b67aef8e41}{%
+           family={Stellari},
+           familyi={S\bibinitperiod},
+           given={Paolo},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{b49997ad5475e040db454e5459972c29}
+      \strng{fullhash}{b49997ad5475e040db454e5459972c29}
+      \strng{bibnamehash}{b49997ad5475e040db454e5459972c29}
+      \strng{authorbibnamehash}{b49997ad5475e040db454e5459972c29}
+      \strng{authornamehash}{b49997ad5475e040db454e5459972c29}
+      \strng{authorfullhash}{b49997ad5475e040db454e5459972c29}
+      \field{labelalpha}{HMS09}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0012-7094}
+      \field{journaltitle}{Duke Math. J.}
+      \field{number}{3}
+      \field{title}{Derived equivalences of {$K3$} surfaces and orientation}
+      \field{volume}{149}
+      \field{year}{2009}
+      \field{pages}{461\bibrangedash 507}
+      \range{pages}{47}
+      \verb{doi}
+      \verb 10.1215/00127094-2009-043
+      \endverb
+    \endentry
+    \entry{MR2200048}{article}{}
+      \name{author}{2}{}{%
+        {{hash=62ef5d71962e55d1e2757e1aeb5755c8}{%
+           family={Huybrechts},
+           familyi={H\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=832f9206fe12eeaf70508ec033fafdaf}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5dc284bbfb4cfb66328280773047b90}
+      \strng{fullhash}{a5dc284bbfb4cfb66328280773047b90}
+      \strng{bibnamehash}{a5dc284bbfb4cfb66328280773047b90}
+      \strng{authorbibnamehash}{a5dc284bbfb4cfb66328280773047b90}
+      \strng{authornamehash}{a5dc284bbfb4cfb66328280773047b90}
+      \strng{authorfullhash}{a5dc284bbfb4cfb66328280773047b90}
+      \field{labelalpha}{HT06}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1073-2780}
+      \field{journaltitle}{Math. Res. Lett.}
+      \field{number}{1}
+      \field{title}{{$\mathbb P$}-objects and autoequivalences of derived categories}
+      \field{volume}{13}
+      \field{year}{2006}
+      \field{pages}{87\bibrangedash 98}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.4310/MRL.2006.v13.n1.a7
+      \endverb
+    \endentry
+    \entry{10.1007/BFb0066287}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=e2958ce4cce4084fed067d6e57f32b76}{%
+           family={Illusie},
+           familyi={I\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{e2958ce4cce4084fed067d6e57f32b76}
+      \strng{fullhash}{e2958ce4cce4084fed067d6e57f32b76}
+      \strng{bibnamehash}{e2958ce4cce4084fed067d6e57f32b76}
+      \strng{authorbibnamehash}{e2958ce4cce4084fed067d6e57f32b76}
+      \strng{authornamehash}{e2958ce4cce4084fed067d6e57f32b76}
+      \strng{authorfullhash}{e2958ce4cce4084fed067d6e57f32b76}
+      \field{labelalpha}{Ill71}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Th\'{e}orie des Intersections et Th\'{e}or\`{e}me de Riemann-Roch}
+      \field{isbn}{978-3-540-36936-3}
+      \field{title}{Conditions de Finitude Relatives}
+      \field{year}{1971}
+      \field{pages}{222\bibrangedash 273}
+      \range{pages}{52}
+    \endentry
+    \entry{MR2629510}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d0651cd3fc85427231bbca1f28cceb85}{%
+           family={Ishii},
+           familyi={I\bibinitperiod},
+           given={Akira},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6c57ea0288afb93888c160dff5b0225e}{%
+           family={Ueda},
+           familyi={U\bibinitperiod},
+           given={Kazushi},
+           giveni={K\bibinitperiod}}}%
+        {{hash=e5c1ea2e4d7554289f3b498e5ea4c495}{%
+           family={Uehara},
+           familyi={U\bibinitperiod},
+           given={Hokuto},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{3d17b3b87e06334e7d2b488c3eea7000}
+      \strng{fullhash}{3d17b3b87e06334e7d2b488c3eea7000}
+      \strng{bibnamehash}{3d17b3b87e06334e7d2b488c3eea7000}
+      \strng{authorbibnamehash}{3d17b3b87e06334e7d2b488c3eea7000}
+      \strng{authornamehash}{3d17b3b87e06334e7d2b488c3eea7000}
+      \strng{authorfullhash}{3d17b3b87e06334e7d2b488c3eea7000}
+      \field{labelalpha}{IUU10}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-040X}
+      \field{journaltitle}{J. Differential Geom.}
+      \field{number}{1}
+      \field{title}{Stability conditions on {$A_n$}-singularities}
+      \field{volume}{84}
+      \field{year}{2010}
+      \field{pages}{87\bibrangedash 126}
+      \range{pages}{40}
+      \verb{doi}
+      \verb 10.4310/jdg/1271271794
+      \endverb
+    \endentry
+    \entry{MR2198807}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d0651cd3fc85427231bbca1f28cceb85}{%
+           family={Ishii},
+           familyi={I\bibinitperiod},
+           given={Akira},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e5c1ea2e4d7554289f3b498e5ea4c495}{%
+           family={Uehara},
+           familyi={U\bibinitperiod},
+           given={Hokuto},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{6a945fb3a70ce51a0e9d4d0c40fc8247}
+      \strng{fullhash}{6a945fb3a70ce51a0e9d4d0c40fc8247}
+      \strng{bibnamehash}{6a945fb3a70ce51a0e9d4d0c40fc8247}
+      \strng{authorbibnamehash}{6a945fb3a70ce51a0e9d4d0c40fc8247}
+      \strng{authornamehash}{6a945fb3a70ce51a0e9d4d0c40fc8247}
+      \strng{authorfullhash}{6a945fb3a70ce51a0e9d4d0c40fc8247}
+      \field{labelalpha}{IU05}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-040X}
+      \field{journaltitle}{J. Differential Geom.}
+      \field{number}{3}
+      \field{title}{Autoequivalences of derived categories on the minimal resolutions of {$A_n$}-singularities on surfaces}
+      \field{volume}{71}
+      \field{year}{2005}
+      \field{pages}{385\bibrangedash 435}
+      \range{pages}{51}
+      \verb{doi}
+      \verb 10.4310/jdg/1143571989
+      \endverb
+    \endentry
+    \entry{karube2023stability}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=40e807d25fa40a855c62ca837c1cba90}{%
+           family={Karube},
+           familyi={K\bibinitperiod},
+           given={Tomohiro},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{40e807d25fa40a855c62ca837c1cba90}
+      \strng{fullhash}{40e807d25fa40a855c62ca837c1cba90}
+      \strng{bibnamehash}{40e807d25fa40a855c62ca837c1cba90}
+      \strng{authorbibnamehash}{40e807d25fa40a855c62ca837c1cba90}
+      \strng{authornamehash}{40e807d25fa40a855c62ca837c1cba90}
+      \strng{authorfullhash}{40e807d25fa40a855c62ca837c1cba90}
+      \field{labelalpha}{Kar23}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.AG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Stability conditions on degenerated elliptic curves}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2301.09453
+      \endverb
+    \endentry
+    \entry{Kulikov1977}{article}{}
+      \name{author}{1}{}{%
+        {{hash=bbbe943c8105415f3f6901e2af6a58ac}{%
+           family={{Kulikov}},
+           familyi={K\bibinitperiod},
+           given={Viktor\bibnamedelima S.},
+           giveni={V\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{bbbe943c8105415f3f6901e2af6a58ac}
+      \strng{fullhash}{bbbe943c8105415f3f6901e2af6a58ac}
+      \strng{bibnamehash}{bbbe943c8105415f3f6901e2af6a58ac}
+      \strng{authorbibnamehash}{bbbe943c8105415f3f6901e2af6a58ac}
+      \strng{authornamehash}{bbbe943c8105415f3f6901e2af6a58ac}
+      \strng{authorfullhash}{bbbe943c8105415f3f6901e2af6a58ac}
+      \field{labelalpha}{Kul77}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Izv. Math.}
+      \field{number}{5}
+      \field{title}{{Degenerations of K3 Surfaces and Enriques Surfaces}}
+      \field{volume}{11}
+      \field{year}{1977}
+      \field{pages}{957\bibrangedash 989}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1070/IM1977v011n05ABEH001753
+      \endverb
+    \endentry
+    \entry{MR2238172}{article}{}
+      \name{author}{1}{}{%
+        {{hash=43dab46f60eb70dba99c8d2ad5e976f9}{%
+           family={Kuznetsov},
+           familyi={K\bibinitperiod},
+           given={A.\bibnamedelimi G.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{43dab46f60eb70dba99c8d2ad5e976f9}
+      \strng{fullhash}{43dab46f60eb70dba99c8d2ad5e976f9}
+      \strng{bibnamehash}{43dab46f60eb70dba99c8d2ad5e976f9}
+      \strng{authorbibnamehash}{43dab46f60eb70dba99c8d2ad5e976f9}
+      \strng{authornamehash}{43dab46f60eb70dba99c8d2ad5e976f9}
+      \strng{authorfullhash}{43dab46f60eb70dba99c8d2ad5e976f9}
+      \field{labelalpha}{Kuz06}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1607-0046,2587-5906}
+      \field{journaltitle}{Izv. Ross. Akad. Nauk Ser. Mat.}
+      \field{number}{3}
+      \field{title}{Hyperplane sections and derived categories}
+      \field{volume}{70}
+      \field{year}{2006}
+      \field{pages}{23\bibrangedash 128}
+      \range{pages}{106}
+      \verb{doi}
+      \verb 10.1070/IM2006v070n03ABEH002318
+      \endverb
+    \endentry
+    \entry{MR1805936}{article}{}
+      \name{author}{2}{}{%
+        {{hash=936dd47259093eb3bed64085ae614a01}{%
+           family={Labru\`{e}re},
+           familyi={L\bibinitperiod},
+           given={Catherine},
+           giveni={C\bibinitperiod}}}%
+        {{hash=aa8f80ba7c11a25e46f23bcf807ace8b}{%
+           family={Paris},
+           familyi={P\bibinitperiod},
+           given={Luis},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{ac634635b3de241812a0aedb6c8feeba}
+      \strng{fullhash}{ac634635b3de241812a0aedb6c8feeba}
+      \strng{bibnamehash}{ac634635b3de241812a0aedb6c8feeba}
+      \strng{authorbibnamehash}{ac634635b3de241812a0aedb6c8feeba}
+      \strng{authornamehash}{ac634635b3de241812a0aedb6c8feeba}
+      \strng{authorfullhash}{ac634635b3de241812a0aedb6c8feeba}
+      \field{labelalpha}{LP01}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1472-2747}
+      \field{journaltitle}{Algebr. Geom. Topol.}
+      \field{title}{Presentations for the punctured mapping class groups in terms of {A}rtin groups}
+      \field{volume}{1}
+      \field{year}{2001}
+      \field{pages}{73\bibrangedash 114}
+      \range{pages}{42}
+      \verb{doi}
+      \verb 10.2140/agt.2001.1.73
+      \endverb
+    \endentry
+    \entry{MR3663596}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c77bcb5a1d011a943b4c056bd4102966}{%
+           family={Lekili},
+           familyi={L\bibinitperiod},
+           given={Yank{\i{}}},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=73607a0ded445abece92dece0b78e03e}{%
+           family={Polishchuk},
+           familyi={P\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{10e6736f9e065fa69cbfafd7a7c1f84f}
+      \strng{fullhash}{10e6736f9e065fa69cbfafd7a7c1f84f}
+      \strng{bibnamehash}{10e6736f9e065fa69cbfafd7a7c1f84f}
+      \strng{authorbibnamehash}{10e6736f9e065fa69cbfafd7a7c1f84f}
+      \strng{authornamehash}{10e6736f9e065fa69cbfafd7a7c1f84f}
+      \strng{authorfullhash}{10e6736f9e065fa69cbfafd7a7c1f84f}
+      \field{extraname}{1}
+      \field{labelalpha}{LP17}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1022-1824}
+      \field{journaltitle}{Selecta Math. (N.S.)}
+      \field{number}{3}
+      \field{title}{Arithmetic mirror symmetry for genus 1 curves with {$n$} marked points}
+      \field{volume}{23}
+      \field{year}{2017}
+      \field{pages}{1851\bibrangedash 1907}
+      \range{pages}{57}
+      \verb{doi}
+      \verb 10.1007/s00029-016-0286-2
+      \endverb
+    \endentry
+    \entry{MR3830878}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c77bcb5a1d011a943b4c056bd4102966}{%
+           family={Lekili},
+           familyi={L\bibinitperiod},
+           given={Yank{\i{}}},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=73607a0ded445abece92dece0b78e03e}{%
+           family={Polishchuk},
+           familyi={P\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{10e6736f9e065fa69cbfafd7a7c1f84f}
+      \strng{fullhash}{10e6736f9e065fa69cbfafd7a7c1f84f}
+      \strng{bibnamehash}{10e6736f9e065fa69cbfafd7a7c1f84f}
+      \strng{authorbibnamehash}{10e6736f9e065fa69cbfafd7a7c1f84f}
+      \strng{authornamehash}{10e6736f9e065fa69cbfafd7a7c1f84f}
+      \strng{authorfullhash}{10e6736f9e065fa69cbfafd7a7c1f84f}
+      \field{extraname}{2}
+      \field{labelalpha}{LP18}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1753-8416}
+      \field{journaltitle}{J. Topol.}
+      \field{number}{3}
+      \field{title}{Auslander orders over nodal stacky curves and partially wrapped {F}ukaya categories}
+      \field{volume}{11}
+      \field{year}{2018}
+      \field{pages}{615\bibrangedash 644}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1112/topo.12064
+      \endverb
+    \endentry
+    \entry{MR1078016}{book}{}
+      \name{author}{1}{}{%
+        {{hash=759ab07af39c6d4b330f2bb6f07ba395}{%
+           family={Miranda},
+           familyi={M\bibinitperiod},
+           given={Rick},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ETS Editrice, Pisa}%
+      }
+      \strng{namehash}{759ab07af39c6d4b330f2bb6f07ba395}
+      \strng{fullhash}{759ab07af39c6d4b330f2bb6f07ba395}
+      \strng{bibnamehash}{759ab07af39c6d4b330f2bb6f07ba395}
+      \strng{authorbibnamehash}{759ab07af39c6d4b330f2bb6f07ba395}
+      \strng{authornamehash}{759ab07af39c6d4b330f2bb6f07ba395}
+      \strng{authorfullhash}{759ab07af39c6d4b330f2bb6f07ba395}
+      \field{labelalpha}{Mir89}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Dottorato di Ricerca in Matematica. [Doctorate in Mathematical Research]}
+      \field{title}{The basic theory of elliptic surfaces}
+      \field{year}{1989}
+      \field{pages}{vi+108}
+      \range{pages}{-1}
+    \endentry
+    \entry{MR607081}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5b836c9f99d403481a506a4d9359c564}{%
+           family={Mukai},
+           familyi={M\bibinitperiod},
+           given={Shigeru},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b836c9f99d403481a506a4d9359c564}
+      \strng{fullhash}{5b836c9f99d403481a506a4d9359c564}
+      \strng{bibnamehash}{5b836c9f99d403481a506a4d9359c564}
+      \strng{authorbibnamehash}{5b836c9f99d403481a506a4d9359c564}
+      \strng{authornamehash}{5b836c9f99d403481a506a4d9359c564}
+      \strng{authorfullhash}{5b836c9f99d403481a506a4d9359c564}
+      \field{labelalpha}{Muk81}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0027-7630}
+      \field{journaltitle}{Nagoya Math. J.}
+      \field{title}{Duality between {$D(X)$} and {$D(\hat X)$} with its application to {P}icard sheaves}
+      \field{volume}{81}
+      \field{year}{1981}
+      \field{pages}{153\bibrangedash 175}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1017/S002776300001922X
+      \endverb
+    \endentry
+    \entry{opper2023spherical}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e31ec4e52a283d8eb171d9a2bc775bf5}{%
+           family={Opper},
+           familyi={O\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e31ec4e52a283d8eb171d9a2bc775bf5}
+      \strng{fullhash}{e31ec4e52a283d8eb171d9a2bc775bf5}
+      \strng{bibnamehash}{e31ec4e52a283d8eb171d9a2bc775bf5}
+      \strng{authorbibnamehash}{e31ec4e52a283d8eb171d9a2bc775bf5}
+      \strng{authornamehash}{e31ec4e52a283d8eb171d9a2bc775bf5}
+      \strng{authorfullhash}{e31ec4e52a283d8eb171d9a2bc775bf5}
+      \field{labelalpha}{Opp23}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.AG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Spherical objects, transitivity and auto-equivalences of Kodaira cycles via gentle algebras}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2011.08288
+      \endverb
+    \endentry
+    \entry{MR1921811}{article}{}
+      \name{author}{1}{}{%
+        {{hash=62dfe7f593c4161a4e0ebf77e719dd38}{%
+           family={Orlov},
+           familyi={O\bibinitperiod},
+           given={D.\bibnamedelimi O.},
+           giveni={D\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{62dfe7f593c4161a4e0ebf77e719dd38}
+      \strng{fullhash}{62dfe7f593c4161a4e0ebf77e719dd38}
+      \strng{bibnamehash}{62dfe7f593c4161a4e0ebf77e719dd38}
+      \strng{authorbibnamehash}{62dfe7f593c4161a4e0ebf77e719dd38}
+      \strng{authornamehash}{62dfe7f593c4161a4e0ebf77e719dd38}
+      \strng{authorfullhash}{62dfe7f593c4161a4e0ebf77e719dd38}
+      \field{labelalpha}{Orl02}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1607-0046}
+      \field{journaltitle}{Izv. Ross. Akad. Nauk Ser. Mat.}
+      \field{number}{3}
+      \field{title}{Derived categories of coherent sheaves on abelian varieties and equivalences between them}
+      \field{volume}{66}
+      \field{year}{2002}
+      \field{pages}{131\bibrangedash 158}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1070/IM2002v066n03ABEH000389
+      \endverb
+    \endentry
+    \entry{Persson--Pinkham1981}{article}{}
+      \name{author}{2}{}{%
+        {{hash=536e033a187db62d834cb1eb567a4cd4}{%
+           family={Persson},
+           familyi={P\bibinitperiod},
+           given={Ulf},
+           giveni={U\bibinitperiod}}}%
+        {{hash=cbe83a4568c39b8e98aacff47741a791}{%
+           family={Pinkham},
+           familyi={P\bibinitperiod},
+           given={Henry},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{8ffd1c249e0e8ee5f60d4473faf2bbb1}
+      \strng{fullhash}{8ffd1c249e0e8ee5f60d4473faf2bbb1}
+      \strng{bibnamehash}{8ffd1c249e0e8ee5f60d4473faf2bbb1}
+      \strng{authorbibnamehash}{8ffd1c249e0e8ee5f60d4473faf2bbb1}
+      \strng{authornamehash}{8ffd1c249e0e8ee5f60d4473faf2bbb1}
+      \strng{authorfullhash}{8ffd1c249e0e8ee5f60d4473faf2bbb1}
+      \field{labelalpha}{PP81}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ann. Math.}
+      \field{number}{1}
+      \field{title}{Degeneration of Surfaces with Trivial Canonical Bundle}
+      \field{volume}{113}
+      \field{year}{1981}
+      \field{pages}{45\bibrangedash 66}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.2307/1971133
+      \endverb
+    \endentry
+    \entry{MR3720794}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f0fe80a8a47b28039e89a7fec268e7ef}{%
+           family={Rizzardo},
+           familyi={R\bibinitperiod},
+           given={Alice},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f0fe80a8a47b28039e89a7fec268e7ef}
+      \strng{fullhash}{f0fe80a8a47b28039e89a7fec268e7ef}
+      \strng{bibnamehash}{f0fe80a8a47b28039e89a7fec268e7ef}
+      \strng{authorbibnamehash}{f0fe80a8a47b28039e89a7fec268e7ef}
+      \strng{authornamehash}{f0fe80a8a47b28039e89a7fec268e7ef}
+      \strng{authorfullhash}{f0fe80a8a47b28039e89a7fec268e7ef}
+      \field{labelalpha}{Riz17}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0001-8708,1090-2082}
+      \field{journaltitle}{Adv. Math.}
+      \field{title}{Adjoints to a {F}ourier-{M}ukai functor}
+      \field{volume}{322}
+      \field{year}{2017}
+      \field{pages}{83\bibrangedash 96}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/j.aim.2017.10.015
+      \endverb
+    \endentry
+    \entry{MR1831820}{article}{}
+      \name{author}{2}{}{%
+        {{hash=4ba4e55b2ec1fde3d1a0e337553787e1}{%
+           family={Seidel},
+           familyi={S\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=832f9206fe12eeaf70508ec033fafdaf}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{19e23458ebe75c24d7cafd06b2e39915}
+      \strng{fullhash}{19e23458ebe75c24d7cafd06b2e39915}
+      \strng{bibnamehash}{19e23458ebe75c24d7cafd06b2e39915}
+      \strng{authorbibnamehash}{19e23458ebe75c24d7cafd06b2e39915}
+      \strng{authornamehash}{19e23458ebe75c24d7cafd06b2e39915}
+      \strng{authorfullhash}{19e23458ebe75c24d7cafd06b2e39915}
+      \field{labelalpha}{ST01}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0012-7094}
+      \field{journaltitle}{Duke Math. J.}
+      \field{number}{1}
+      \field{title}{Braid group actions on derived categories of coherent sheaves}
+      \field{volume}{108}
+      \field{year}{2001}
+      \field{pages}{37\bibrangedash 108}
+      \range{pages}{72}
+      \verb{doi}
+      \verb 10.1215/S0012-7094-01-10812-0
+      \endverb
+    \endentry
+    \entry{stacks-project}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a3dbcb9991f2a884f2c608ad2335af9f}{%
+           family={{Stacks project authors}},
+           familyi={S\bibinitperiod},
+           given={The},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{a3dbcb9991f2a884f2c608ad2335af9f}
+      \strng{fullhash}{a3dbcb9991f2a884f2c608ad2335af9f}
+      \strng{bibnamehash}{a3dbcb9991f2a884f2c608ad2335af9f}
+      \strng{authorbibnamehash}{a3dbcb9991f2a884f2c608ad2335af9f}
+      \strng{authornamehash}{a3dbcb9991f2a884f2c608ad2335af9f}
+      \strng{authorfullhash}{a3dbcb9991f2a884f2c608ad2335af9f}
+      \field{labelalpha}{Sta23}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://stacks.math.columbia.edu}}
+      \field{title}{The Stacks project}
+      \field{year}{2023}
+    \endentry
+    \entry{MR2430202}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4a5c16c1943c400148c4f446a146129e}{%
+           family={Toda},
+           familyi={T\bibinitperiod},
+           given={Yukinobu},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a5c16c1943c400148c4f446a146129e}
+      \strng{fullhash}{4a5c16c1943c400148c4f446a146129e}
+      \strng{bibnamehash}{4a5c16c1943c400148c4f446a146129e}
+      \strng{authorbibnamehash}{4a5c16c1943c400148c4f446a146129e}
+      \strng{authornamehash}{4a5c16c1943c400148c4f446a146129e}
+      \strng{authorfullhash}{4a5c16c1943c400148c4f446a146129e}
+      \field{labelalpha}{Tod07}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0037-9484,2102-622X}
+      \field{journaltitle}{Bull. Soc. Math. France}
+      \field{number}{1}
+      \field{title}{On a certain generalization of spherical twists}
+      \field{volume}{135}
+      \field{year}{2007}
+      \field{pages}{119\bibrangedash 134}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.24033/bsmf.2529
+      \endverb
+    \endentry
+    \entry{MR3568337}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e5c1ea2e4d7554289f3b498e5ea4c495}{%
+           family={Uehara},
+           familyi={U\bibinitperiod},
+           given={Hokuto},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{e5c1ea2e4d7554289f3b498e5ea4c495}
+      \strng{fullhash}{e5c1ea2e4d7554289f3b498e5ea4c495}
+      \strng{bibnamehash}{e5c1ea2e4d7554289f3b498e5ea4c495}
+      \strng{authorbibnamehash}{e5c1ea2e4d7554289f3b498e5ea4c495}
+      \strng{authornamehash}{e5c1ea2e4d7554289f3b498e5ea4c495}
+      \strng{authorfullhash}{e5c1ea2e4d7554289f3b498e5ea4c495}
+      \field{labelalpha}{Ueh16}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2313-1691}
+      \field{journaltitle}{Algebr. Geom.}
+      \field{number}{5}
+      \field{title}{Autoequivalences of derived categories of elliptic surfaces with non-zero {K}odaira dimension}
+      \field{volume}{3}
+      \field{year}{2016}
+      \field{pages}{543\bibrangedash 577}
+      \range{pages}{35}
+      \verb{doi}
+      \verb 10.14231/AG-2016-025
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
